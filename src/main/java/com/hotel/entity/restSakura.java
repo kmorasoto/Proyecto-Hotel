@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author XLight
  */
 @Entity
-@Table(name = "restSakura")
+@Table(name = "restsakura")
 public class restSakura implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
