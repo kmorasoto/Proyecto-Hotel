@@ -30,11 +30,11 @@ public class reservaSakuraController {
     @Autowired
     private IrestSakuraService restSakuraService;
     
-    @GetMapping("/reservaSakura")
+    @GetMapping("/reservaRest")
     
     public String index(Model model) {
         List<reservaSakura> listareservaSakura = reservaSakuraService.getAllreservaSakura();
-        model.addAttribute("titulo", "Tabla Reservas Sakura");
+        model.addAttribute("titulo", "Tabla reservaSakura");
         model.addAttribute("reservas", listareservaSakura);
         return "reservas";
     }
@@ -51,7 +51,7 @@ public class reservaSakuraController {
     @PostMapping("/save")
     public String guardarreservaSakura(@ModelAttribute reservaSakura reservaSakura){
         reservaSakuraService.savereservaSakura(reservaSakura);
-        return "redirect:/reserva";    
+        return "redirect:/reservaSakura";    
     }
     
     @GetMapping("/editreservaSakura/{id}")
@@ -66,6 +66,6 @@ public class reservaSakuraController {
     @GetMapping("/delete/{id}")
     public String eliminarreservaSakura(@PathVariable("id") Long idreservaSakura){
         reservaSakuraService.delete(idreservaSakura);
-        return"redirect:/reserva";
+        return"redirect:/reservaSakura";
     }
 }
