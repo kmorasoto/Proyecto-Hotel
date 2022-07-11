@@ -18,10 +18,10 @@ import org.springframework.stereotype.Service;
 public class restSakuraService implements IrestSakuraService {
     
     @Autowired
-    private restSakuraRepository restSakuraRepository;
+    private restSakuraRepository restsakuraRepository;
     
     @Override
     public List<restSakura> listMesa(){
-        return (List<restSakura>)restSakuraRepository.findAll();
+        return (List<restSakura>)restsakuraRepository.findAll();
     }
 }

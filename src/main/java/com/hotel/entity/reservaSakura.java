@@ -30,7 +30,7 @@ public class reservaSakura implements Serializable {
     private String email;
     
     @ManyToOne
-    @JoinColumn(name="restSakura_id")
+    @JoinColumn(name="restsakura_id")
     private restSakura mesa;
 
     public long getId() {

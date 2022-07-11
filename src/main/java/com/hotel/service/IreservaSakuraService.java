@@ -11,8 +11,8 @@ import java.util.List;
  * @author XLight
  */
 public interface IreservaSakuraService {
-    public List<reservaSakura> getAllreservaSakura();
+    public List<reservaSakura> getAllreservasakura();
     public reservaSakura getreservaSakuraById (long id);
-    public void savereservaSakura (reservaSakura reservaSakura);
+    public void savereservaSakura (reservaSakura reservasakura);
     public void delete (long id);
 }

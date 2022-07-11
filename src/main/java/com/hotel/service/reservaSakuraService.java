@@ -17,25 +17,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class reservaSakuraService implements IreservaSakuraService{
     @Autowired
-    private reservaSakuraRepository reservaSakuraRepository;
+    private reservaSakuraRepository reservasakuraRepository;
     
     @Override
-    public List<reservaSakura> getAllreservaSakura(){
-        return (List<reservaSakura>)reservaSakuraRepository.findAll();
+    public List<reservaSakura> getAllreservasakura(){
+        return (List<reservaSakura>)reservasakuraRepository.findAll();
     }
     
     @Override
     public reservaSakura getreservaSakuraById(long id){
-        return reservaSakuraRepository.findById(id).orElse(null);
+        return reservasakuraRepository.findById(id).orElse(null);
     }
     
     @Override
     public void savereservaSakura(reservaSakura reservaSakura){
-        reservaSakuraRepository.save(reservaSakura);
+        reservasakuraRepository.save(reservaSakura);
     }
     
     @Override
     public void delete(long id){
-        reservaSakuraRepository.deleteById(id);
+        reservasakuraRepository.deleteById(id);
     }
 }
