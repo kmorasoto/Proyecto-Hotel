@@ -17,47 +17,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 body{
 	background: url(../images/hotel-vistalmar.jpg) center;
 	background-size: cover;
-	color: #333;
+	color: #183254;
 	font-size: 18px;
 	font-family: 'Kdam Thmor Pro', sans-serif;
         font-family: 'Oxygen', sans-serif;
 }
-.container{
-	border-radius: 0.5em;
-	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
-	display: block;
-	max-width: 480px;
-	overflow: hidden;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	padding: 2em;
+.container{ /*Para darle formato al cuadro de registro*/
+	border-radius: 20px;
+	box-shadow: 0 0 30px 0;
+	max-width: 480px; /*Tamaño de la caja de registro*/
+	overflow: hidden; /*Para que la imagen de fondo no se vea borrosa*/
+        transform: translate(-50%, -50%); /*permite mover o rotar nuestros elementos, translate mueve el elemento según la posición donde se encuentre*/
+	padding: 35px; /*Tamaño del cuadro de registro*/
 	position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 1;
-	width: 98%;
+	top: 50%;
+	left: 50%;
+	width: 100%;
 }
-.container:before{
-	background: url(../images/hotel-vistalmar.jpg) center;
-	background-size: cover;
-	content: '';
-	-webkit-filter: blur(10px);
-	filter: blur(10px);
-	height: 100vh;
+.container:before{ /*Para darle formato al cuadro de registro*/
+        background: url(../images/hotel-vistalmar.jpg) center; 
+	content: ''; /*Para que se vea borrosa la parte del registro*/
+	filter: blur(10px); /*Para que se vea borrosa la parte del registro*/
+	height: 100%;
 	position: absolute;
 		top: 50%;
 		left: 50%;
 		z-index: -1;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	width: 100vw;
+	width: 100%;
 }
-.container:after{
-	background: rgba(255,255,255,0.6);
+.container:after{ /*Para darle formato al cuadro de registro*/
+	background: rgba(230,230,230,0.50); /*Color del registro*/
 	content: '';
-	display: block;
 	height: 100%;
 	position: absolute;
 		top: 0;
@@ -65,87 +56,70 @@ body{
 		z-index: -1;
 	width: 100%;
 }
-form button.submit{
-	background: rgba(255,255,255,0.25);
-	border: 1px solid #333;
-	line-height: 1em;
-	padding: 0.5em 0.5em;
-	-webkit-transition: all 0.25s;
-	transition: all 0.25s;
-}
-form button:hover,
-form button:focus,
-form button:active,
-form button.loading{
-	background: #333;
-	color: #fff;
-	outline: none;
-}
-form button.success{
-	background: #27ae60;
-	border-color: #27ae60; 
-	color: #fff;
-}
 
-form button span.loading-spinner{
-	-webkit-animation: spin 0.5s linear infinite;
-	animation: spin 0.5s linear infinite;
-	border: 2px solid #fff;
-	border-top-color: transparent;
-	border-radius: 50%;
-	display: inline-block;
-	height: 1em;
-	width: 1em;
+button.submit{
+	background: rgba(230,230,230,0.50); /*Color del botón registrarte*/
+	border: 1px solid #183254;
+        border-radius: 5px;    
+	line-height: 16px;
+	padding: 10px 8px;
 }
-
-form label{
-	border-bottom: 1px solid #333;
+button:hover,
+button:focus,
+button:active,
+button.loading{
+	background: #183254;/*color del hoover - botón registrarte*/
+	color: #fff; /*color de la letra hoover - botón registrarte*/	
+}
+form label{ /*Formato del registro (lineas de los campos)*/
+	border-bottom: 1px solid #183254;
 	display: block;
-	font-size: 1.25em;
-	margin-bottom: 0.5em;
-	-webkit-transition: all 0.25s;
-	transition: all 0.25s;
+	font-size: 25px;
+	margin-bottom: 15px;
 }
-form label.col-one-half{
+
+label.col-fields{/*Para que el campo de Nombre y Apellidos quedé en la misma linea*/
 	float: left;
 	width: 50%;
 }
-form label.col-one-half:nth-of-type(even){
-	border-left: 1px solid #333;
-	padding-left: 0.25em;
+
+/*No borrar lo primero que es para que solo cree la line en el medio y no la cree antes del Nombre*/
+label.col-fields:nth-of-type(even){/*linea de separación entre Nombre y Apellidos*/
+	border-left: 1px solid #183254;
+	padding-left: 5px; /*Identación del campo de apellidos*/
 }
-form label input{
-	background: none;
+
+label input{/*para que no se muestre el espacio donde se debe escribir
+        Las primeras dos son para que no se vean los espacios*/
+	background: none; 
 	border: none;
-	line-height: 1em;
-	font-weight: 300;
-	padding: 0.125em 0.25em;
+	line-height: 16px;
+	font-weight: 100; /*grosor de la negrita en la información que ingresan*/
 	width: 100%;
+        font-family: 'Oxygen', sans-serif;
+        outline: none;
+        background-color: transparent;
 }
-form label input:focus{
-	outline: none;
-}
-form label input:-webkit-autofill{
-	background-color: transparent !important;
-}
-form label span.label-text{
+
+label span.label-text{ /*Formato para el nombre de los campos*/
 	display: block;
-	font-size: 0.5em;
+	font-size: 12px;
 	font-weight: bold;
-	padding-left: 0.5em;
+	padding-left: 5px;
 	text-transform: uppercase;
-	-webkit-transition: all 0.25s;
-	transition: all 0.25s;
 }
-form label.invalid{border-color: #c0392b !important;}
-form label.invalid span.label-text{color: #c0392b;}
-form label.password{position: relative;}
-form label.password button.toggle-visibility{
+
+form label.invalid{border-color: #333 !important;}
+form label.invalid span.label-text{color: #333;}
+form label.password{
+    position: relative;
+}
+form label.password button.password2{
 	background: none;
 	border: none;
 	cursor: pointer;
-	font-size: 0.75em;
-	line-height: 1em;
+	font-size: 10px;
+	line-height: 16px;
 	position: absolute;
 		top: 50%;
 		right: 0.5em;
@@ -156,34 +130,34 @@ form label.password button.toggle-visibility{
 	-webkit-transition: all 0.25s;
 	transition: all 0.25s;
 }
-form label.password button.toggle-visibility:hover,
-form label.password button.toggle-visibility:focus,
-form label.password button.toggle-visibility:active{
+label.password button.password2:hover,
+label.password button.password2:focus,
+label.password button.password2:active{
 	color: #000;
 	outline: none;
 }
-form label.password button.toggle-visibility span{
+form label.password button.password2 span{
     vertical-align: middle;
 }
 
-h1{
+h1{/*con este le damos formato al título Registro*/
 	font-size: 55px;
 	margin: 0 0 50px 0;
 	text-align: center;
 	font-family: 'Kdam Thmor Pro', sans-serif;
         font-family: 'Oxygen', sans-serif;
 }
-h1 img{
+h1 img{/*Para darle formato a la imagen de fondo*/
 	height: auto;
 	margin: 0 auto;
 	max-width: 240px;
 	width: 100%;
 }
-html{
+html{/*Para que la imagen se vea completa de un tamaño correcto en el background*/
 	font-size: 18px;
 	height: 100%;
 }
 
-.text-center{
+.text-fields{ /*para que el registrate esté centrado*/
 	text-align: center;
 }
