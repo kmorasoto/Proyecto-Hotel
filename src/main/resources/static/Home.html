@@ -3,7 +3,8 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+    
     <head>
         <title>Home2 | Bienvenidos</title>
         <link rel="stylesheet" href="css/Home.css">
@@ -13,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <div>
             <!-- Este es para crear la cabecera o sea la parte de arriba-->
-            <header>
+            <header th:fragment="header">
                 <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
                 <nav id = "navbar" class="py-30">
                     <div class="container">
@@ -53,7 +54,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         entorno natural y su magia</p>
                 </div> 
                 <div class ="box feature-3" >
-                    <h4><a href="evento.html">EVENTOS</a></h4>
+                    <h4><a href="eventos.html">EVENTOS</a></h4>
                     <p>Realiza todos tus eventos con nosotros</p>
                 </div> 
                 <div class ="box feature-4" >
