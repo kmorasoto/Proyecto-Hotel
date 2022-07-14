@@ -26,7 +26,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 
                 <!-- Formulario -->
                 <div class="container">
-                    <form th:object = "${reservasakuraN}"
+                    <form th:object = "${reservasakura}"
                           th:action="@{/save}"
                           method="POST"
                           >
@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <label class="form-control-sm col-form-label col-md-2" for="restsakura">Mesa</label>
                             <div class="col-sm-10">
                                 <select th:field="*{mesa}" class="form-control form-control-sm col-md-6" id="mesa" aria-describedby="emailHelp">
-                                    <option th:each="x:${restsakura}"
+                                    <option th:each="x:${mesas}"
                                             th:value="${x.id}"
                                             th:text="${x.mesa}"/>
                                 </select>

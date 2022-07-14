@@ -3,33 +3,52 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
-       <head>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
         <title>Login</title>
         <link rel="stylesheet" href="css/login.css">
+        <meta charset="UTF-8">
     </head>
     <body>
-        <div class ="center">
-            <form method="post">
-                <h1>Welcome</h1>
-                
-                <div class="txt_field">
-                    <input type="text" required>
-                    <label>Username</label> <!-- El label es para solicitar información -->
-                </div>
-                
-                <div class="txt_field">
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                
-                <div class="pass">Forgot your password?</div>
-                <input type="submit" value="Login">
-                
-                <div class="signup">
-                    Not a member? <a href="#">Signup</a>
-                </div>               
-            </form>
+        <div><header th:fragment="header">
+                <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
+                <nav id = "navbar" class="py-30">
+                    <div class="container">
+                        <!--Header 1 -->
+                        <h1 class="logo"><a href="login.html"> Hotel Palace</a></h1>
+                        <!-- Vamos a crear una lista-->
+                        <ul>
+                            <li><a href="Home.html">Menú Principal</a></li>
+                            <li><a href="detallesRooms.html">Habitaciones</a></li>
+                            <li><a href="acerca_de.html">Nosotros</a></li>
+                            <li><a href="masDetallesR4.html" class="current">Login</a></li>
+                            <li><a href="login.html">Salir</a></li>
+                        </ul>
+                    </div> 
+                </nav> 
+            </header>
+            <div class ="center">
+                <form method="post">
+                    <h1>Welcome</h1>
+
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <label>Username</label> <!-- El label es para solicitar información -->
+                    </div>
+
+                    <div class="txt_field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="pass">Forgot your password?</div>
+                    <input type="submit" value="Login">
+
+                    <div class="signup">
+                        Not a member? <a href="Home.html">Signup</a>
+                    </div>               
+                </form>
+            </div>
         </div>
     </body>
 </html>

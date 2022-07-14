@@ -45,12 +45,12 @@ public class reservaSakuraController {
         List<restSakura> listaMesas = restsakuraService.listMesa();
         model.addAttribute("reservasakura", new reservaSakura());
         model.addAttribute("mesas", listaMesas);
-        return "crear";
+        return "crear_reservasakura";
     }
     
     @PostMapping("/save")
-    public String guardarreservaSakura(@ModelAttribute reservaSakura reservaSakura){
-        reservasakuraService.savereservaSakura(reservaSakura);
+    public String guardarreservaSakura(@ModelAttribute reservaSakura reservasakura){
+        reservasakuraService.savereservaSakura(reservasakura);
         return "redirect:/reservasakura";    
     }
     
@@ -59,8 +59,8 @@ public class reservaSakuraController {
         reservaSakura reservasakura = reservasakuraService.getreservaSakuraById(idreservaSakura);
         List<restSakura> listarestSakura = restsakuraService.listMesa();
         model.addAttribute("reservasakura", reservasakura);
-        model.addAttribute("meses", listarestSakura);
-        return "crear";
+        model.addAttribute("mesas", listarestSakura);
+        return "crear_reservasakura";
     }
     
     @GetMapping("/delete/{id}")
