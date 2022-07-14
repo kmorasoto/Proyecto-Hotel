@@ -40,8 +40,6 @@ p{
   
 }
 
-
-
 /*Logo Navbar*/
 #navbar .logo{
     font-size: 37px;
@@ -88,6 +86,7 @@ p{
 .main{
   margin-top: -10px;
 }
+
 .section__title {
   font-size: 2em;
   position: relative;
@@ -110,9 +109,6 @@ p{
   height: 3px;
   background: #EEAD33;
 }
-
-
-
 
 .design__item{
   position: relative;
@@ -184,6 +180,7 @@ p{
   }
   .container-box{
     width: 50%;
+    background: #fff;
   }
   
   .container-tips {
@@ -198,7 +195,26 @@ p{
     height: 100%;
   }
   
-
+.reservar_btn {
+  display: block;
+  border: 3px solid #EEAD33;
+  width: 120px;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  color: #EEAD33;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 300px;
+  transition: all 0.5s;
+}
+.reservar_btn:hover {
+  background: #EEAD33;
+  color: white;
+}
+  
+  
+  
 /*footer*/
 #mainfooter{
     text-align: center;
