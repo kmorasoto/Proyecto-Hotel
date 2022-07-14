@@ -1,11 +1,4 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 20 jun. 2022, 20:31:01
-    Author     : dell
-*/
+
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oxygen:wght@300&display=swap');
 
 *{
@@ -13,6 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-family: 'Oxygen', sans-serif;
@@ -20,13 +14,7 @@ body{
     color:#fff;
     background: #183254;
 }
-h1{
-    font-size: 39px;   
-}
 
-h2{
-    font-size: 20px; 
-}
 
 p{
     font-size: 16px; 
@@ -34,9 +22,9 @@ p{
 
 .container{
     margin: auto;
-    max-width: 1100px;
+    max-width: 1300px;
     overflow: auto;
-    padding:  0 20px;
+    padding:  15 50px;
 }
 
 .py-30{
@@ -46,17 +34,15 @@ p{
 /*Configuracion de las cajas*/
 .box{
     float: left;
-  /*  width: 50%;*/
+    width: 30%;
     text-align: center;
-    padding: 50px;
-    height: 250px;
+    padding: 80px;
+  
 }
 
-/*Espacio entre los textos de los box*/
-.box h4{
-    padding-bottom: 30px;
-}
 
+
+/*Logo Navbar*/
 #navbar .logo{
     font-size: 37px;
     float: left;
@@ -79,65 +65,143 @@ p{
     float: left;
     padding: 20px;
     text-align: center;
+    display: block;
+}
+
+#navbar ul li a{
+     float: left;
+    text-align: center;
+    display: block;
+    color: #fff;
+    text-decoration: none; 
+}
+
+#navbar ul li a.current{
+   color: #A28424;
 }
 
  /*Cuando pase el mouse encima de la lista de Servicios etc cambie de color*/
-#navbar ul li:hover {
-    color: #A28424
+#navbar ul li a:hover {
+    color: #A28424;
 }
 
-/*Showcase*/
-.showcase {
-    background:  url(../images/hotel-vistalmar.jpg);
-    height: 605px;
-    padding: 190px 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    text-align: center;
+.main{
+  margin-top: -10px;
+}
+.section__title {
+  font-size: 2em;
+  position: relative;
+  text-align: center;
 }
 
-.showcase h1{
-    text-transform: uppercase;
-    font-weight: lighter;
+.eventos{
+  text-align: center;
+  padding: 30px;
+  max-width: 200px;
+  margin: auto;
+}
+.section__title:before {
+  content: "";
+  width: 200px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #EEAD33;
 }
 
-/*Box - Feautures*/
 
-#features .feature-1{
-    background: url(../images/Restaurante.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+
+.design__item{
+  position: relative;
+}
+
+.design__item:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.design__title{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 1.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.design__title:before {
+  content: "";
+  width: 200px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #EEAD33;
+}
+
+.design__title:after {
+  content: "";
+  width: 200px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #EEAD33;
+}
+
+.box__content{
+  width: 230%;
+}
+
+.box__title{
+  color: #EEAD33;
+  margin: 30;
+}
+
+.box__txt {
+  color: #999;
+}
+
+  .container-design, .container-tips{
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .design__item{
     width: 50%;
-}
-#features .feature-2{
-    background: url(../images/Habitacion.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .feature-3{
-    background: url(../images/eventos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .feature-4{
-    background: url(../images/tours.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+  }
+  .container-box{
+    width: 50%;
+  }
+  
+  .container-tips {
+    height: 400px;
+  }
+  
+  .Bodas{
+       height: 100%;
+       width: 100%;
+  }
+  .container-tips .design__item{
+    height: 100%;
+  }
+  
 
-#features h4{
-    text-transform: uppercase;
-    color: #183254;
+/*footer*/
+#mainfooter{
+    text-align: center;
     
-}
-
-#features p{
-    color: #183254;
-    font-size: 17px;
 }
 

@@ -7,7 +7,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <head>
         <title>Eventos</title>
         <link rel="stylesheet" href="css/eventos.css">
-       
+
     </head>
     <body>
         <div>
@@ -16,46 +16,55 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
                 <nav id = "navbar" class="py-30">
                     <div class="container">
-                        <!-- Header 1 -->
+                        <!--Header 1 -->
                         <h1 class="logo"><a href="evento.html"> Hotel Palace</a></h1>
                         <!-- Vamos a crear una lista-->
                         <ul>
-                            <li>Menú Principal</li>
-                            <li>Servicios</li>
-                            <li>Contacto</li>
-                            <li>Español</li>
+                            <li><a href="Home.html" class="current">Menú Principal</a></li>
+                            <li><a href="Home.html">Servicios</a></li>
+                            <li><a href="acerca_de.html">Nosotros</a></li>
+                            <li><a href="Home.html">Contactos</a></li>
+                            <li><a href="login.html">Salir</a></li>
                         </ul>
                     </div>  
-                     <div class="showcase">
-                        <div class="container">
-                            <h1>Eventos </h1>   
-                        </div>
-                    </div>
+
                 </nav> 
             </header>
             
-            <!-- Feautures-->
-            <section id="features">
-                <div class ="box feature-1" >
-                    <h4>Bodas</h4>
-                    <p></p>
-                </div> 
-                 <div class ="box feature-2" >
-                    <h4>Baby Showers</h4>
-                    <p>Hermosas habitaciones diseñadas
-                        para que pueda conectar con el
-                        entorno natural y su magia</p>
-                </div> 
-                 <div class ="box feature-3" >
-                    <h4>Fiestas</h4>
-                    <p>Realiza todos tus eventos con nosotros</p>
-                </div> 
-                 <div class ="box feature-4" >
-                    <h4>Bautizos</h4>
-                    <p>Toda la emoción con nuestras actividades</p>
-                </div> 
-                
+            <main class="main">
+      <section class="eventos">
+        <h2 class="section__title">EVENTOS</h2>   </section>
+        
+            <section class="container-tips">
+                <div class="design__item">
+                    <h3 class="design__title">Matrimonios</h3>
+                       <img src="images/Bodas.jpg" alt="" class="Bodas">
+                </div>
+                <div class="container-box">
+                    <div class="box">
+                        <div class="box__content">
+                            <h3 class="box__title">BODAS VINTAGE</h3>
+                            <p class="box__txt">Con mobiliario antiguo y restaurado</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__content">
+                            <h3 class="box__title">BODAS EN LA PLAYA</h3>
+                            <p class="box__txt">Al aire libre con la mejor playa de costa rica</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__content">
+                            <h3 class="box__title">BODA SHABBY CHIC</h3>
+                            <p class="box__txt">Una mezcla de elementos antiguos con modernos</p>
+                        </div>
+                    </div>
+                </div>
             </section>
+            
+            <footer id="mainfooter" class="py-30">
+                <p>&copy; 2022 Hotel Palace</p>
+            </footer>
         </div>
     </body>
 </html>
