@@ -51,7 +51,7 @@ public class reservaSakuraController {
     @PostMapping("/save")
     public String guardarreservaSakura(@ModelAttribute reservaSakura reservasakura){
         reservasakuraService.savereservaSakura(reservasakura);
-        return "redirect:/restaurantes.html";    
+        return "redirect:/restauranteSakura.html";    
     }
     
     @GetMapping("/editreservaSakura/{id}")
@@ -67,5 +67,5 @@ public class reservaSakuraController {
     public String eliminarreservaSakura(@PathVariable("id") Long idreservaSakura){
         reservasakuraService.delete(idreservaSakura);
         return"redirect:/reservasakura";
-    }
+    }   
 }
