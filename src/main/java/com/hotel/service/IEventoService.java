@@ -4,10 +4,14 @@
  */
 package com.hotel.service;
 
+import com.hotel.entity.Evento;
+import com.hotel.entity.restSakura;
+import java.util.List;
+
 /**
  *
  * @author dell
  */
 public interface IEventoService {
-    
+        public List<Evento> listEvento();
 }

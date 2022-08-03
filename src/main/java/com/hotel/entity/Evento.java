@@ -15,7 +15,7 @@ import javax.persistence.Table;
  *
  * @author dell
  */@Entity
-@Table(name = "Evento")
+@Table(name = "eventos")
 public class Evento implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

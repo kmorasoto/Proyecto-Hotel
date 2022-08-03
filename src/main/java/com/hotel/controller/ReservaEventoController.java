@@ -4,13 +4,10 @@
  */
 package com.hotel.controller;
 
+import com.hotel.entity.Evento;
 import com.hotel.entity.ReservaEvento;
-import com.hotel.entity.reservaSakura;
-import com.hotel.entity.restSakura;
 import com.hotel.service.IEventoService;
 import com.hotel.service.IReservaEventoService;
-import com.hotel.service.IreservaSakuraService;
-import com.hotel.service.IrestSakuraService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,12 +32,45 @@ public class ReservaEventoController {
     
   
     
-   /* public String index(Model model) {
-        List<ReservaEvento> listaReservaEvento = reservaeventoService.getAllReservaevento();
-        model.addAttribute("titulo", "Lista de reservas");
+    @GetMapping("/reservaevento")
+    
+    public String index(Model model) {
+        List<ReservaEvento> listaReservaEvento = reservaeventoService.getAllReservaEvento();
+        model.addAttribute("titulo", " Tabla Reserva Evento");
         model.addAttribute("reservaevento", listaReservaEvento);
         return "reservaevento";
-    }*/
+    }
+    
+    @GetMapping("/reservaeventoN")
+    
+    public String crearReservaEvento(Model model){
+        List<Evento> listaEvento = eventoService.listEvento();
+        model.addAttribute("reservaevento", new ReservaEvento());
+        model.addAttribute("evento", listaEvento);
+        return "crear";
+    }
+    
+    @PostMapping("/saveevento")
+    public String guardarReservaEvento(@ModelAttribute ReservaEvento reservaevento){
+        reservaeventoService.saveReservaEvento(reservaevento);
+        return "redirect:/reservarevento";    
+    }
+    
+    @GetMapping("/editReservaEvento/{id}")
+    public String editarReservaEvento(@PathVariable("id") Long idReservaEvento, Model model){
+        ReservaEvento reservaevento = reservaeventoService.getReservaEventoById(idReservaEvento);
+        List<Evento> listaEvento = eventoService.listEvento();
+        model.addAttribute("ReservaEvento", reservaevento);
+        model.addAttribute("evento", listaEvento);
+        return "crear";
+    }
+    
+    @GetMapping("/deleteevento/{id}")
+    public String eliminarReservaEvento(@PathVariable("id") Long idReservaEvento){
+        reservaeventoService.delete(idReservaEvento);
+        return"redirect:/reservaevento";
+    }
+}
     
   
-}
+

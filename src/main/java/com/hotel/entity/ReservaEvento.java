@@ -28,16 +28,8 @@ public class ReservaEvento implements Serializable{
     
     @ManyToOne
     @JoinColumn(name="eventos_id")
-    private ReservaEvento evento;
+    private Evento evento;
 
-    public ReservaEvento getEvento() {
-        return evento;
-    }
-
-    public void setEvento(ReservaEvento evento) {
-        this.evento = evento;
-    }
-    
     public long getId() {
         return id;
     }
@@ -45,6 +37,8 @@ public class ReservaEvento implements Serializable{
     public void setId(long id) {
         this.id = id;
     }
+
+   
 
     public String getNombre() {
         return nombre;

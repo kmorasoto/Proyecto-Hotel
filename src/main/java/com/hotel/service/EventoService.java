@@ -4,10 +4,24 @@
  */
 package com.hotel.service;
 
+import com.hotel.entity.Evento;
+import com.hotel.entity.restSakura;
+import com.hotel.repository.EventoRepository;
+import com.hotel.repository.restSakuraRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author dell
- */
-public class EventoService {
+ */@Service
+public class EventoService implements IEventoService{
+      @Autowired
+    private EventoRepository eventoRepository;
     
+    @Override
+    public List<Evento> listEvento(){
+        return (List<Evento>)eventoRepository.findAll();
+    }
 }

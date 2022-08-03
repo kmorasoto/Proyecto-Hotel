@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  * @author dell
  */@Repository
 public interface ReservaEventoRepository extends CrudRepository<ReservaEvento,Long>{
-    
+    ReservaEvento findByNombre(String nombre);
 }
