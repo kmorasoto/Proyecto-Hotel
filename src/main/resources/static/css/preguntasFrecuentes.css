@@ -112,6 +112,9 @@ p{
     background-position: center;
     background-size:cover;
     text-align: center;
+        font-weight: bolder;
+        font-size: larger;
+        font-size:xx-large;
     
 
 }
@@ -122,6 +125,13 @@ p{
 
 }
 
+.showcase h2{
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    color: #183254;
+
+}
 .showcase p{
     background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(5px);

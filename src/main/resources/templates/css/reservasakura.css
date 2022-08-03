@@ -2,7 +2,10 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
-
+/* 
+    Created on : 5 jun. 2022, 20:58:07
+    Author     : dell
+*/
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oxygen:wght@300&display=swap');
 
 *{
@@ -111,11 +114,14 @@ p{
     background-position: center;
     background-size:cover;
     text-align: center;
+    color: #fff;
 }
 
 .showcase h1{
     text-transform: uppercase;
     font-weight: lighter;
+  
+    
 }
 
 /*Box - Feautures*/

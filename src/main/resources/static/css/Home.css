@@ -141,7 +141,7 @@ p{
 #features .feature-3{
     background: url(../images/eventos.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    backgroune: cover;
     background-position: center;
 }
 #features .feature-4{
