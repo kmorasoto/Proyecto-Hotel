@@ -36,7 +36,7 @@ public class ReservaEventoController {
     
     public String index(Model model) {
         List<ReservaEvento> listaReservaEvento = reservaeventoService.getAllReservaEvento();
-        model.addAttribute("titulo", " Tabla Reserva Evento");
+        model.addAttribute("titulo", " Reservas para Eventos");
         model.addAttribute("reservaevento", listaReservaEvento);
         return "reservaevento";
     }
@@ -44,25 +44,25 @@ public class ReservaEventoController {
     @GetMapping("/reservaeventoN")
     
     public String crearReservaEvento(Model model){
-        List<Evento> listaEvento = eventoService.listEvento();
+        List<Evento> listaEventos = eventoService.listEvento();
         model.addAttribute("reservaevento", new ReservaEvento());
-        model.addAttribute("evento", listaEvento);
-        return "crear";
+        model.addAttribute("eventos", listaEventos);
+        return "crear_evento";
     }
     
     @PostMapping("/saveevento")
     public String guardarReservaEvento(@ModelAttribute ReservaEvento reservaevento){
         reservaeventoService.saveReservaEvento(reservaevento);
-        return "redirect:/reservarevento";    
+        return "redirect:/reservaevento";    
     }
     
     @GetMapping("/editReservaEvento/{id}")
     public String editarReservaEvento(@PathVariable("id") Long idReservaEvento, Model model){
         ReservaEvento reservaevento = reservaeventoService.getReservaEventoById(idReservaEvento);
-        List<Evento> listaEvento = eventoService.listEvento();
+        List<Evento> listaEventos = eventoService.listEvento();
         model.addAttribute("ReservaEvento", reservaevento);
-        model.addAttribute("evento", listaEvento);
-        return "crear";
+        model.addAttribute("eventos", listaEventos);
+        return "crear_evento";
     }
     
     @GetMapping("/deleteevento/{id}")
