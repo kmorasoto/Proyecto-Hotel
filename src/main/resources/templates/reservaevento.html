@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getFecha}"></td>
                     <td th:text="${user.getEvento.getEvento}"></td>
                     <td>
-                        <a th:href="@{/editReservaEvento/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editreservaevento/{id}(id=${user.getId})}">Edit</a>
                     </td>
                     <td>
                         <a th:href="@{/deleteevento/{id}(id=${user.getId})}">Delete</a>

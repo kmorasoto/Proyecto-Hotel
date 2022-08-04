@@ -76,7 +76,7 @@ public class ReservaEvento implements Serializable{
         return evento;
     }
 
-    public void setMesa(Evento evento) {
+    public void setEvento(Evento evento) {
         this.evento = evento;
     }
 }

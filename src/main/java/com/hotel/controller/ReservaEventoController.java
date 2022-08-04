@@ -44,7 +44,7 @@ public class ReservaEventoController {
     @GetMapping("/reservaeventoN")
     
     public String crearReservaEvento(Model model){
-        List<Evento> listaEventos = eventoService.listEvento();
+        List<Evento> listaEventos = eventoService.listEvento1();
         model.addAttribute("reservaevento", new ReservaEvento());
         model.addAttribute("eventos", listaEventos);
         return "crear_evento";
@@ -59,7 +59,7 @@ public class ReservaEventoController {
     @GetMapping("/editReservaEvento/{id}")
     public String editarReservaEvento(@PathVariable("id") Long idReservaEvento, Model model){
         ReservaEvento reservaevento = reservaeventoService.getReservaEventoById(idReservaEvento);
-        List<Evento> listaEventos = eventoService.listEvento();
+        List<Evento> listaEventos = eventoService.listEvento1();
         model.addAttribute("ReservaEvento", reservaevento);
         model.addAttribute("eventos", listaEventos);
         return "crear_evento";
