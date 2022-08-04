@@ -13,5 +13,5 @@ import java.util.List;
  * @author dell
  */
 public interface IEventoService {
-        public List<Evento> listEvento();
+        public List<Evento> listEvento1();
 }

@@ -71,5 +71,12 @@ public class ReservaEvento implements Serializable{
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-   
+    
+   public Evento getEvento() {
+        return evento;
+    }
+
+    public void setEvento(Evento evento) {
+        this.evento = evento;
+    }
 }
