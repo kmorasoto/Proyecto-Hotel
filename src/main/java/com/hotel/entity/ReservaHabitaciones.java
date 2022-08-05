@@ -13,9 +13,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ *
+ * @author Daniela
+ */
 @Entity
-@Table (name = "reservaevento")
-public class ReservaEvento implements Serializable{
+@Table (name = "reservahabitaciones")
+public class ReservaHabitaciones implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
@@ -25,10 +29,9 @@ public class ReservaEvento implements Serializable{
     private String email;
     private String fecha;
     
-    
     @ManyToOne
-    @JoinColumn(name="eventos_id")
-    private Evento evento;
+    @JoinColumn(name="habitaciones_id")
+    private Habitaciones habitacion;
 
     public long getId() {
         return id;
@@ -37,8 +40,6 @@ public class ReservaEvento implements Serializable{
     public void setId(long id) {
         this.id = id;
     }
-
-   
 
     public String getNombre() {
         return nombre;
@@ -71,12 +72,14 @@ public class ReservaEvento implements Serializable{
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    
-   public Evento getEvento() {
-        return evento;
+
+    public Habitaciones getHabitacion() {
+        return habitacion;
     }
 
-    public void setEvento(Evento evento) {
-        this.evento = evento;
+    public void setHabitacion(Habitaciones habitacion) {
+        this.habitacion = habitacion;
     }
+
+       
 }

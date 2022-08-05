@@ -13,14 +13,16 @@ import javax.persistence.Table;
 
 /**
  *
- * @author dell
- */@Entity
-@Table(name = "eventos")
-public class Evento implements Serializable{
+ * @author Daniela
+ */
+@Entity
+@Table (name = "habitaciones")
+public class Habitaciones implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    
     private long id;
-    private String evento;
+    private String habitacion;
 
     public long getId() {
         return id;
@@ -30,14 +32,13 @@ public class Evento implements Serializable{
         this.id = id;
     }
 
-    public String getEvento() {
-        return evento;
+    public String getHabitacion() {
+        return habitacion;
     }
 
-    public void setEvento(String evento) {
-        this.evento = evento;
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
     }
 
-  
-
+   
 }

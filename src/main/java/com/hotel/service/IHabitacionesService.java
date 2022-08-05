@@ -4,14 +4,15 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Evento;
-import com.hotel.entity.restSakura;
+import com.hotel.entity.Habitaciones;
 import java.util.List;
 
 /**
  *
- * @author dell
+ * @author Daniela
  */
-public interface IEventoService {
-        public List<Evento> listEvento1();
+public interface IHabitacionesService {
+    
+    public List<Habitaciones> listHabitacion();
+    
 }

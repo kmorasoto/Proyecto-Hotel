@@ -11,7 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header th:replace="plantilla/template::header"> </header>
+         
         <h1 th:text="${titulo}"></h1>
 
 
@@ -23,6 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <th scope="col">Telefono </th>
                     <th scope="col">Email </th>
                     <th scope="col">Fecha </th>
+                    <th scope="col">Evento </th>
                     <th scope="col">Editar </th>
                     <th scope="col">Eliminar </th>
                 </tr>
@@ -31,16 +32,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <th:block th:each="user : ${reservaevento}">
                 <tr>
                     <td th:text="${user.getNombre}"></td>
-                    <td th:text="${user.getTelefon}"></td>
-                    <td th:text="${user.getEmail}"></td>
+                    <td th:text="${user.getTelefono}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getFecha}"></td>
                     <td th:text="${user.getEvento.getEvento}"></td>
                     <td>
-                        <a th:href="@{/editReservaevento/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editreservaevento/{id}(id=${user.getId})}">Edit</a>
                     </td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/deleteevento/{id}(id=${user.getId})}">Delete</a>
                     </td>
                 </tr>
             </th:block>
