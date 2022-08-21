@@ -18,5 +18,6 @@ public interface IRegistrosService {
     public Registros getRegistrosById(long id);
     public void saveRegistros (Registros Registros);
     public void delete (long id);
+    public Registros findByNombre (String nombre);
   
 }

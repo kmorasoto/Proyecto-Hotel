@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author Daniela
  */
 @Controller
-public class LoginController {
+public class DormitorioController {
     
-    @GetMapping("/login")
-    public String index(){ 
-        return "/login"; //este si va a ser nuestro html que se encuentra en templates
+    @GetMapping("/dormitorio")
+    public String dormitorio () {
+        return "dormitorio";
+        
     }
 }
