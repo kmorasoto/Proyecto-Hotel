@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RegistrosRepository extends CrudRepository<Registros,Long>{
-    
+    Registros findByNombre (String nombre); //Esto es para obtener una fila de nuestra BD, es como hacer un select.
 }

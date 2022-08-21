@@ -37,19 +37,7 @@ body{
     background-size: cover;
 }
 
-.center{    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    background: white;
-    transform: translate(-50%,-50%); /*permite mover o rotar nuestros elementos, translate mueve el elemento según la posicion donde se encuentre*/
-    border-radius: 10px; /*redondea las esquinas/los bordes*/    
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);/*aplica una especie de sombreado a nuestra cajita*/
-    background-color: #D5F5E3;
-}
-
-.center h1{    
+.card-header{    
     text-align: center;
     color: #34495E;
     padding: 20px 0;
@@ -57,7 +45,7 @@ body{
  
 }
 
-.center form{    
+.container card{    
     padding: 0 40px;
     box-sizing: border-box
 }
@@ -117,21 +105,21 @@ input[type="submit"]:hover{
     transition: .5s;
 }
 
-.signup {    
+/*.signup {    
     margin: 30px 0;
     text-align: center;
     font-size: 16px;
     color: #666666;
-}
+}*/
 
-.signup a{        
+/*.signup a{        
     color: #2691d9;
     text-decoration: none;
-}
+}*/
 
-.signup a:hover{        
+/*.signup a:hover{        
     text-decoration: underline;
-}
+}*/
 
 .txt_field span ::before{        
     content: '';
@@ -156,7 +144,7 @@ input[type="submit"]:hover{
     width: 100%;    
 }
 
-.container{
+.container1{
     max-width: 100%;
     overflow: auto;
     padding:  15 0px;
@@ -168,7 +156,7 @@ input[type="submit"]:hover{
     
 }
 
-.container:before{ 
+.container1:before{ 
         background: url(../images/hotel-vistalmar.jpg) top; 
 	content: ''; 
 	filter: blur(10px); 
@@ -181,7 +169,7 @@ input[type="submit"]:hover{
 	width: 100%;
 }
 
-.container:after{ 
+.container1:after{ 
 	background: rgba(230,230,230,0.50); 
 	content: '';
 	height: 100%;
@@ -237,4 +225,60 @@ input[type="submit"]:hover{
  /*Cuando pase el mouse encima de la lista de Servicios etc cambie de color*/
 #navbar ul li a:hover {
     color: #A28424;
+}
+
+form label{ /*Formato del registro (lineas de los campos)*/
+	border-bottom: 1px solid #183254;
+	display: block;
+	margin-bottom: 15px;
+}
+
+button.submit{
+	background: rgba(230,230,230,0.50); /*Color del botón registrarte*/
+	border: 1px solid #183254;
+        border-radius: 5px;    
+	line-height: 16px;
+	padding: 10px 8px;
+}
+button:hover,
+button:focus,
+button:active,
+button.loading{
+	background: #183254;/*color del hoover - botón registrarte*/
+	color: #fff; /*color de la letra hoover - botón registrarte*/	
+}
+
+.card{ /*Para darle formato al cuadro de registro*/
+	border-radius: 20px;
+	box-shadow: 0 0 30px 0;
+	max-width: 480px; /*Tamaño de la caja de registro*/
+	overflow: hidden; /*Para que la imagen de fondo no se vea borrosa*/
+        transform: translate(-50%, -50%); /*permite mover o rotar nuestros elementos, translate mueve el elemento según la posición donde se encuentre*/
+	padding: 35px; /*Tamaño del cuadro de registro*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+}
+.card:before{ /*Para darle formato al cuadro de registro*/
+        background: url(../images/hotel-vistalmar.jpg) center; 
+	content: ''; /*Para que se vea borrosa la parte del registro*/
+	filter: blur(10px); /*Para que se vea borrosa la parte del registro*/
+	height: 100%;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+.card:after{ /*Para darle formato al cuadro de registro*/
+	background: rgba(230,230,230,0.50); /*Color del registro*/
+	content: '';
+	height: 100%;
+	position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	width: 100%;
 }

@@ -39,5 +39,10 @@ public class RegistrosService implements IRegistrosService {
     public void delete(long id) {
         RegistrosRepository.deleteById(id);
     }
+    
+    @Override
+    public Registros findByNombre(String nombre) {
+        return RegistrosRepository.findByNombre(nombre);
+    }
 
 }
