@@ -70,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasRole("ADMIN")
                 .antMatchers("/Home.html","/","/login") //a estos enpoints pueden ir cualquiera que tengan los siguientes roles
                 .hasAnyRole("USER","VENDEDOR","ADMIN")
-                .anyRequest().authenticated()
+                //.anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll().defaultSuccessUrl("/registros",true); //esto es porque queremos utilizar nuestro propio login
