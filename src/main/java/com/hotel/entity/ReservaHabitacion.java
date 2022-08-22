@@ -18,8 +18,8 @@ import javax.persistence.Table;
  * @author Daniela
  */
 @Entity
-@Table (name = "reservahabitaciones")
-public class ReservaHabitaciones implements Serializable {
+@Table (name = "reservahabitacion")
+public class ReservaHabitacion implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
@@ -28,10 +28,12 @@ public class ReservaHabitaciones implements Serializable {
     private String telefono;
     private String email;
     private String fecha;
+    private int cantidad_noches;
+    private int cantidad_personas;
     
     @ManyToOne
     @JoinColumn(name="habitaciones_id")
-    private Habitaciones habitacion;
+    private Habitacion habitacion;
 
     public long getId() {
         return id;
@@ -73,12 +75,29 @@ public class ReservaHabitaciones implements Serializable {
         this.fecha = fecha;
     }
 
-    public Habitaciones getHabitacion() {
+    public Habitacion getHabitacion() {
         return habitacion;
     }
 
-    public void setHabitacion(Habitaciones habitacion) {
+    public void setHabitacion(Habitacion habitacion) {
         this.habitacion = habitacion;
+    }
+    
+    
+    public int getCantidad_noches() {
+        return cantidad_noches;
+    }
+
+    public void setCantidad_noches(int cantidad_noches) {
+        this.cantidad_noches = cantidad_noches;
+    }
+
+    public int getCantidad_personas() {
+        return cantidad_personas;
+    }
+
+    public void setCantidad_personas(int cantidad_personas) {
+        this.cantidad_personas = cantidad_personas;
     }
 
        

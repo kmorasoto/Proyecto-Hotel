@@ -16,7 +16,7 @@ public class DormitorioController {
     
     @GetMapping("/dormitorio")
     public String dormitorio () {
-        return "dormitorio";
+        return "/dormitorio";
         
     }
 }

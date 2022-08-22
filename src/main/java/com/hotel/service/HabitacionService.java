@@ -4,25 +4,25 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Habitaciones;
-import com.hotel.repository.HabitacionesRepository;
+import com.hotel.entity.Habitacion;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.hotel.repository.HabitacionRepository;
 
 /**
  *
  * @author Daniela
  */
 @Service
-public class HabitacionesService implements IHabitacionesService {
+public class HabitacionService implements IHabitacionService {
 
     @Autowired
-    private HabitacionesRepository HabitacionesRepository;
+    private HabitacionRepository habitacionRepository;
 
     @Override
-    public List<Habitaciones> listHabitacion() {
-        return (List<Habitaciones>)HabitacionesRepository.findAll();
+    public List<Habitacion> listHabitacion() {
+        return (List<Habitacion>)habitacionRepository.findAll();
     }
     
 

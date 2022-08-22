@@ -4,15 +4,15 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Habitaciones;
+import com.hotel.entity.Habitacion;
 import java.util.List;
 
 /**
  *
  * @author Daniela
  */
-public interface IHabitacionesService {
+public interface IHabitacionService {
     
-    public List<Habitaciones> listHabitacion();
+    public List<Habitacion> listHabitacion();
     
 }
