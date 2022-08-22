@@ -69,7 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/registros","/login","/registrosN","/") //tiene acceso a  estos enpoints si tiene el role de ADMIN
                 .hasRole("ADMIN")
                 .antMatchers("/Home.html","/","/login") //a estos enpoints pueden ir cualquiera que tengan los siguientes roles
-                .hasAnyRole("USER","ADMIN")
+                .hasAnyRole("USER","VENDEDOR","ADMIN")     
                 //.anyRequest().authenticated()
                 .and()
                 .formLogin()

@@ -3,11 +3,12 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaft.org/extras/spring-security">
     <head>
         <title>Eventos</title>
         <link rel="stylesheet" href="css/eventos.css">
-<meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -45,7 +46,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title">BODAS VINTAGE</h3>
-                            <p class="box__txt">Con mobiliario antiguo y restaurado</p>
+                            <p  th:text="#{servicios.eventos}" class="box__txt">Con mobiliario antiguo y restaurado</p>
                         </div>
                     </div>
                     <div class="box">

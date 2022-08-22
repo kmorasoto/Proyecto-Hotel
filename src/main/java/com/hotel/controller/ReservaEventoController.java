@@ -56,11 +56,11 @@ public class ReservaEventoController {
         return "redirect:/Home.html";    
     }
     
-    @GetMapping("/editReservaEvento/{id}")
+    @GetMapping("/editreservaevento/{id}")
     public String editarReservaEvento(@PathVariable("id") Long idReservaEvento, Model model){
         ReservaEvento reservaevento = reservaeventoService.getReservaEventoById(idReservaEvento);
         List<Evento> listaEventos = eventoService.listEvento1();
-        model.addAttribute("ReservaEvento", reservaevento);
+        model.addAttribute("reservaevento", reservaevento);
         model.addAttribute("eventos", listaEventos);
         return "crear_evento";
     }
