@@ -3,21 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.hotel.service;
-
-import com.hotel.entity.Registros;
+import com.hotel.entity.reservaQuattro;
 import java.util.List;
-
-
 
 /**
  *
- * @author Daniela
+ * @author XLight
  */
-public interface IRegistrosService {
-    public List<Registros> getAllRegistros();
-    public Registros getRegistrosById(long id);
-    public void saveRegistros (Registros Registros);
+public interface IreservaQuattroService {
+    public List<reservaQuattro> getAllreservaquattro();
+    public reservaQuattro getreservaQuattroById (long id);
+    public void savereservaQuattro (reservaQuattro reservaquattro);
     public void delete (long id);
-    public Registros findByNombre (String nombre);
-  
 }

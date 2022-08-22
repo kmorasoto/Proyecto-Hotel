@@ -3,15 +3,13 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaft.org/extras/spring-security"> 
+<html xmlns:th="http://www.thymeleaf.org"> 
     
     <head>
         <title>Home2 | Bienvenidos</title>
         <link rel="stylesheet" href="css/Home.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
     </head>
     <body>
         <div>
@@ -24,23 +22,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h1 class="logo"><a href="Home.html"> Hotel Palace</a></h1>
                     <!-- Vamos a crear una lista-->
                     <ul>
-                        <li th:text="#{home.menu}" > <a  href="Home.html">Menú Principal</a></li>
+                        <li><a href="Home.html">Menú Principal</a></li>
                         <li><a href="Home.html">Servicios</a></li>
-                        <li><a href="acerca_de.html">Nosotros</a></li>         
+                        <li><a href="acerca_de.html">Nosotros</a></li>
+                        <li><a href="Home.html">Contactos</a></li>
                         <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                        <li><a href="login.html">Iniciar Sesión</a></li>
-                        <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                              th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
-                             <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN<a></li>
-                   
-                  
-                            
+                        <li><a href="logins.html">Login</a></li>
                     </ul>
                 </div> 
                     <div class="showcase">
                         <div class="container">
-                            <h1 > Bienvenidos a Hotel Palace </h1>   
+                            <h1>Bienvenidos a Hotel Palace </h1>   
                             <p class="large">
                                 Cada momento es un nuevo comienzo</p>
                         </div>
@@ -52,6 +44,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <section id="features">
                 <div class ="box feature-1" >
                     <h4><a href="restauranteSakura.html">RESTAURANTE SAKURA</a></h4>
+                    <p></p>
+                    <h4><a href="restauranteQuattro.html">RESTAURANTE Quattro</a></h4>
                     <p>Agregale sabor a tu día con 
                         nuestros increibles menús 
                         para todo gusto</p>
@@ -76,7 +70,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             
             <footer id="mainfooter" class="py-30">
                 <p>&copy; 2022 Hotel Palace</p>
-                
             </footer>
                     
         </div>

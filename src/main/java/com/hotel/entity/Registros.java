@@ -5,6 +5,9 @@
 package com.hotel.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,6 +32,34 @@ public class Registros implements Serializable {
     private String email;
     private String password;
     
+    private int active;
+    private String roles = "";
+    private String permissions = "";
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
+    }
+            
     @ManyToOne
     @JoinColumn(name="login_id")
     private Login usuario;
@@ -81,6 +112,20 @@ public class Registros implements Serializable {
         this.usuario = usuario;
     }
     
+    //para retornar una lista de permisos o roles, un usuario puede tener varios permisos y roles (admin, user...)
+    public List<String> getRoleList() {
+        if (this.roles.length() > 0) {
+            return Arrays.asList(this.roles.split(","));
+        }
+        return new ArrayList<>();
+    }
+    
+    public List<String> getPermissionList() {
+        if (this.permissions.length() > 0) {
+            return Arrays.asList(this.permissions.split(","));
+        }
+        return new ArrayList<>();     
+    }
  
     
 }

@@ -3,16 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package com.hotel.repository;
-
-import com.hotel.entity.Registros;
+import com.hotel.entity.reservaQuattro;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Daniela
+ * @author XLight
  */
 @Repository
-public interface RegistrosRepository extends CrudRepository<Registros,Long>{
-    Registros findByNombre (String nombre); //Esto es para obtener una fila de nuestra BD, es como hacer un select.
+public interface reservaQuattroRepository extends CrudRepository<reservaQuattro,Long>{
+    
 }
