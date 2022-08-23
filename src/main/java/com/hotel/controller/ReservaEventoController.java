@@ -53,7 +53,7 @@ public class ReservaEventoController {
     @PostMapping("/saveevento")
     public String guardarReservaEvento(@ModelAttribute ReservaEvento reservaevento){
         reservaeventoService.saveReservaEvento(reservaevento);
-        return "redirect:/Home.html";    
+        return "redirect:/Inicio";    
     }
     
     @GetMapping("/editreservaevento/{id}")

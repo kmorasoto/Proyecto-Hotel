@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
-    
+
     <head th:fragment="TempHead">
         <title></title>
-        <link rel="stylesheet" href="css/reservasakura.css">
+        <link rel="stylesheet" href="css/home.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" >
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    </head>
-    
-    <body>
+    </head >
 
+    <body>
+        
         <header th:fragment="TempHeader">
 
-            <nav class="navbar" style="background-color: #183254; color: white;">
+            <nav class="navbar" style="background-color: #183254;">
                 <div class="container">
                     <!--Header 1 -->
-                    <h1 class="logo"><a href="home.html" style="color: white;">Hotel Palace</a></h1>
+                    <h1 class="logo"><a href="home.html"><a> Hotel Palace</a></h1>
+              
+                    <ul>
+                        <li th:text="#{home.menu}" > <a  href="Home.html">Menú Principal</a></li>
+                        <li th:text="#{home.nav}" ><a href="Home.html">Servicios</a></li>
+                        <li th:text="#{home.nav2}"><a href="acerca_de.html">Nosotros</a></li>         
+                        <li th:text="#{home.nav3}"><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                        <li th:text="#{home.nav4}"><a href="login.html">Iniciar Sesión</a></li>
 
-                    <ul style="color: white;">
-                        <li><a href="Home.html" style="color: white;">Menú Principal</a></li>
-                        <li><a href="Home.html" style="color: white;">Servicios</a></li>
-                        <li><a href="acerca_de.html" style="color: white;">Nosotros</a></li>
-                        <li><a href="Home.html" style="color: white;">Contactos</a></li>
-                        <li><a href="preguntasFrecuentes.html" style="color: white;">Preguntas Frecuentes</a></li>
-                        <li><a href="login.html" style="color: white;">Login</a></li>
+
                     </ul>
                 </div> 
-            </nav> 
+            </nav>
         </header>
-        <div>TODO write content</div>
-    </body>
 
-    <footer class="page-footer font-small white" th:fragment="TempFooter">
-        <div class="text-center py-3" >
-            <p>&copy; 2022 Hotel Palace</p>
-        </div>
-        
-        <!-- comment
-                
-        <footer class="page-footer font-small blue"> 
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="/"> MDBootstrap.com</a>
+
+        <footer class="page-footer font-small white" th:fragment="TempFooter">
+            <div class="text-center py-3" >
+                <p>&copy; 2022 Hotel Palace</p>
             </div>
+
+            <!-- comment
+                    
+            <footer class="page-footer font-small blue"> 
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="/"> MDBootstrap.com</a>
+                </div>
+            </footer>
+            
+            -->
+
         </footer>
-        
-        -->
-
-    </footer>
-
+    </body>
 </html>
