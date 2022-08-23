@@ -4,7 +4,7 @@
  */
 package com.hotel.repository;
 
-import com.hotel.entity.ReservaHabitaciones;
+import com.hotel.entity.ReservaHabitacion;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
  * @author Daniela
  */
 @Repository
-public interface ReservaHabitacionesRepository extends CrudRepository<ReservaHabitaciones,Long> {
-    
+public interface ReservaHabitacionRepository extends CrudRepository<ReservaHabitacion,Long> {
+    ReservaHabitacion findByNombre(String nombre);  
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaft.org/extras/spring-security">
+    <head>
+        <title>Habitaciones</title>
+        <link rel="stylesheet" href="css/habitaciones.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+    <body id="body">
+        <div>
+            <header>
+                <nav id="navbar" class="py-30">
+                    <div class="container">
+                        <!--Header 1 -->
+                        <h1 class="logo"><a href="home.html">Hotel Palace</a></h1>
+
+                        <ul>
+                            <li><a href="Home.html">Menú Principal</a></li>
+                            <li><a href="reservahabitacionN">Reservar Habitación</a></li>
+                            <li><a href="acerca_de.html">Nosotros</a></li>
+                            <li><a href="Home.html">Contactos</a></li>
+                            <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                            <li><a href="login">Salir</a></li>
+                        </ul>
+                    </div>             
+
+                    <div class="showcase">
+                        <div class="container">
+                        <h1 th:text="${titulo}"></h1>
+                        <p class="large">
+                            Te ofrecemos diferentes opciones.</p>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
+            <div>
+                <table class="table table-dark table-striped">
+
+                    <!-- El table head es para el nombre de las columnas, lo demás es para darle formato -->
+                    <thead class="thead-dark"> 
+
+                        <!-- Aquí agregamos los table rows, que son los nombres de las columnas de la tabla -->
+                        <tr>
+                            <th scope="col">Habitación </th>
+                            <th scope="col">Descripción </th>
+                            <th scope="col">Precio </th>
+                        </tr>
+                    </thead>
+
+                    <!-- Por cada usuario en personas quiero que haga lo siguiente  -->
+                    <!-- Table row (tr) donde quiero obtener el valor -->
+                    <!-- Table data (td) -->
+                    <tbody>
+
+                        <!-- el thymeleaf block lo que va a hacer es ejecutar cierta lógica o cierto código basada en los parámetros que nosotros le enviemos -->
+                        <!-- el thymeleaf each: Por cada usuario en personas (por cada objeto que tenemos en nuestra lista de personas) quiero que me haga lo siguiente -->
+                    <th:block th:each="user : ${habitacion}">
+                        <tr class="table-primary">
+                            <!-- El texto lo voy a sustituir por el user.getNombre, que este caso trae de la BD el Nombre de la persona 
+                            esto se llama del método que está en nuestra entidad -->
+                            <td th:text="${user.getHabitacion}"></td>
+                            <td th:text="${user.getDescripcion}"></td>
+                            <td th:text="${user.getPrecio}"></td>
+                        </tr>
+                    </th:block>
+                    </tbody>
+                </table>
+            </div>
+    </body>
+    <footer class="page-footer font-small white">
+        <div class="text-center py-3">
+            <p>&copy; 2022 Hotel Palace</p>
+        </div>       
+    </footer>
+</html>
