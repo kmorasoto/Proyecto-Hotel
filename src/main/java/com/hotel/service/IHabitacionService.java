@@ -14,5 +14,10 @@ import java.util.List;
 public interface IHabitacionService {
     
     public List<Habitacion> listHabitacion();
+    public List<Habitacion> getAllhabitacion();
+    public Habitacion gethabitacionById (long id);
+    public void savehabitacion (Habitacion habitacion);
+    public void delete (long id);
+    public Habitacion findByhabitacion (String habitacion);
     
 }

@@ -24,6 +24,31 @@ public class HabitacionService implements IHabitacionService {
     public List<Habitacion> listHabitacion() {
         return (List<Habitacion>)habitacionRepository.findAll();
     }
+
+    @Override
+    public List<Habitacion> getAllhabitacion() {
+        return(List<Habitacion>)habitacionRepository.findAll();
+    }
+
+    @Override
+    public Habitacion gethabitacionById(long id) {
+        return habitacionRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void savehabitacion(Habitacion habitacion) {
+        habitacionRepository.save(habitacion);
+    }
+
+    @Override
+    public void delete(long id) {
+        habitacionRepository.deleteById(id);
+    }
+
+    @Override
+    public Habitacion findByhabitacion(String habitacion) {
+        return habitacionRepository.findByHabitacion(habitacion);
+    }
     
 
 }

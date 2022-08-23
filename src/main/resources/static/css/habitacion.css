@@ -3,41 +3,49 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
 /* 
-    Created on : 21 ago. 2022, 21:24:15
+    Created on : 23 ago. 2022, 12:09:41
     Author     : Daniela
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oxygen:wght@300&display=swap');
 
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+
 }
 
-body{    
-   
-    min-width: 100vw;
-    min-height: 100vh;
-    width: 100%;
-    height: 100%; 
-    background-image: url(../images/hotel-vistalmar.jpg);
-    background-position: center;
-    background-size: cover;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-family: 'Oxygen', sans-serif;
+.body{
+    color:#fff;
+    background-color: #183254;
+}
+h1{
+    font-size: 39px;   
+    
 }
 
-.container1{
+h2{
+    font-size: 20px; 
+}
+
+p{
+    font-size: 16px; 
+}    
+
+.container{
     margin: auto;
     max-width: 1300px;
     overflow: auto;
-    padding:  15 50px; 
+    padding:  15 50px;
 }
-
 
 .py-30{
     padding: 30px 0;
+}
+
+.clear{
+    clear: both;
 }
 
 /*Logo Navbar*/
@@ -81,4 +89,30 @@ body{
  /*Cuando pase el mouse encima de la lista de Servicios etc cambie de color*/
 #navbar ul li a:hover {
     color: #A28424;
+}
+
+/*Showcase*/
+.showcase {
+    background:  url(../images/hotel-vistalmar.jpg);
+    height: 605px;
+    padding: 190px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    text-align: center;
+    color: #fff;
+}
+
+.showcase h1{
+    text-transform: uppercase;
+    font-weight: lighter;
+  
+    
+}
+
+
+/*footer*/
+#mainfooter{
+    text-align: center;
+    
 }

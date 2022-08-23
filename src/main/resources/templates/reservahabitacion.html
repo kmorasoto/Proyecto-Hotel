@@ -43,10 +43,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getCantidad_personas}"></td>
                     <td th:text="${user.getHabitacion.getHabitacion}"></td>
                     <td>
-                        <a th:href="@{/editreservahabitacion/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editreservahabitacion/{id}(id=${user.getId})}">Editar</a>
                     </td>
                     <td>
-                        <a th:href="@{/deletehabitacion/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/deletehabitacion/{id}(id=${user.getId})}">Eliminar</a>
                     </td>
                 </tr>
             </th:block>
