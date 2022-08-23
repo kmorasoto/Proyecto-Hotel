@@ -20,41 +20,41 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @author XLight
  */
 @Controller
-public class menusakuraController {
+public class menusakuraControllerAdmin {
     
     @Autowired 
     private ImenusakuraService menusakuraService;
 
-    @GetMapping("/menusakura")
+    @GetMapping("/menusakuraAdmin")
     public String index(Model model){
         List<menusakura> listamenusakura = menusakuraService.getAllmenusakura();
         model.addAttribute("titulo","Menu Sakura");
-        model.addAttribute("menusakura", listamenusakura);
-        return "menusakura";
+        model.addAttribute("menusakuraAdmin", listamenusakura);
+        return "menusakuraAdmin";
         }
     
-    @GetMapping("/menusakuraN")
+    @GetMapping("/menusakuraNAdmin")
     public String crearmenusakura(Model model){
-        model.addAttribute("menusakura", new menusakura());
-        return "crear_menusakura";
+        model.addAttribute("menusakuraAdmin", new menusakura());
+        return "crear_menusakuraAdmin";
     }
     
-    @PostMapping("/savemenusakura")
+    @PostMapping("/savemenusakuraAdmin")
     public String guardarmenusakura (@ModelAttribute menusakura menusakura){
         menusakuraService.savemenusakura(menusakura);
-        return "redirect:/menusakura";
+        return "redirect:/menusakuraAdmin";
     }
     
-    @GetMapping("/editmenusakura/{id}")
+    @GetMapping("/editmenusakuraAdmin/{id}")
     public String editarmenusakura(@PathVariable("id") Long idmenusakura, Model model){
         menusakura menusakura = menusakuraService.getmenusakuraById(idmenusakura);
-        model.addAttribute("menusakura", menusakura);
-        return "crear_menusakura";
+        model.addAttribute("menusakuraAdmin", menusakura);
+        return "crear_menusakuraAdmin";
     }
     
-    @GetMapping("/deletemenusakura/{id}")
+    @GetMapping("/deletemenusakuraAdmin/{id}")
     public String eliminarmenusakura(@PathVariable("id") Long idmenusakura){
         menusakuraService.delete(idmenusakura);
-        return "redirect:/menusakura";
+        return "redirect:/menusakuraAdmin";
     }
 }
