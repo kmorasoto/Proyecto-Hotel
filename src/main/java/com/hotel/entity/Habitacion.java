@@ -17,12 +17,13 @@ import javax.persistence.Table;
  */
 @Entity
 @Table (name = "habitaciones")
-public class Habitaciones implements Serializable {
+public class Habitacion implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
     private long id;
     private String habitacion;
+    private double precio;
 
     public long getId() {
         return id;
@@ -38,6 +39,14 @@ public class Habitaciones implements Serializable {
 
     public void setHabitacion(String habitacion) {
         this.habitacion = habitacion;
+    }
+    
+       public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
    

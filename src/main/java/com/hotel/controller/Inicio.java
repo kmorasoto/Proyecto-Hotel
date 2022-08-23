@@ -9,14 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
- * @author Daniela
- */
-@Controller
-public class DormitorioController {
-    
-    @GetMapping("/dormitorio")
-    public String dormitorio () {
-        return "/dormitorio";
-        
-    }
+ * @author dell
+ */@Controller
+public class Inicio {
+     @GetMapping ("/Inicio")
+    public String index(){
+    return "/Inicio";
+    } 
 }
