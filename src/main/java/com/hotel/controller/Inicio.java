@@ -87,4 +87,9 @@ public class Inicio {
     public String toursS(){
     return "/toursS";
     }
+    
+    @GetMapping ("/inicioAdmin")
+    public String inicioAdmin(){
+    return "/inicioAdmin";
+    }
 }
