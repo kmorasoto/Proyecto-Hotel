@@ -58,4 +58,9 @@ public class HabitacionController {
         return "redirect:/habitacion";
     }
     
+    @GetMapping("/habitaciones1")
+    public String index(){
+        return "/habitaciones1";
+    }
+    
 }
