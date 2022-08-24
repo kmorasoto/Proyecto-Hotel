@@ -68,10 +68,10 @@ public class Inicio {
     return "/preguntasFrecuentes";
     }
     
-    @GetMapping ("/registro")
+    /*@GetMapping ("/registro")
     public String registro(){
     return "/registro";
-    }
+    }*/
     
     @GetMapping ("/restauranteQuattro")
     public String restauranteQuattro(){
