@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 	margin: 0;
 	padding: 0;
 }
-body{
+#body{
 	background: url(../images/hotel-vistalmar.jpg) center;
 	background-size: cover;
 	color: #183254;

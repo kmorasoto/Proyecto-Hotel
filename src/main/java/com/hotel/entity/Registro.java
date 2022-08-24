@@ -12,8 +12,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -22,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table (name = "registros")
-public class Registros implements Serializable {
+public class Registro implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
@@ -35,34 +33,6 @@ public class Registros implements Serializable {
     private int active;
     private String roles = "";
     private String permissions = "";
-
-    public int getActive() {
-        return active;
-    }
-
-    public void setActive(int active) {
-        this.active = active;
-    }
-
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
-
-    public String getPermissions() {
-        return permissions;
-    }
-
-    public void setPermissions(String permissions) {
-        this.permissions = permissions;
-    }
-            
-    @ManyToOne
-    @JoinColumn(name="login_id")
-    private Login usuario;
 
     public long getId() {
         return id;
@@ -104,12 +74,28 @@ public class Registros implements Serializable {
         this.password = password;
     }
 
-    public Login getUsuario() {
-        return usuario;
+        public int getActive() {
+        return active;
     }
 
-    public void setUsuario(Login usuario) {
-        this.usuario = usuario;
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
     }
     
     //para retornar una lista de permisos o roles, un usuario puede tener varios permisos y roles (admin, user...)

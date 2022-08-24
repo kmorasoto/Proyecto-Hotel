@@ -4,7 +4,7 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Registros;
+import com.hotel.entity.Registro;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -18,9 +18,9 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 //Almacena información importante del usuario.
 public class Userprincipal implements UserDetails {
-    private Registros Registros;
+    private Registro Registros;
     
-    public Userprincipal(Registros Registros) {
+    public Userprincipal(Registro Registros) {
         this.Registros = Registros;
     }
 
