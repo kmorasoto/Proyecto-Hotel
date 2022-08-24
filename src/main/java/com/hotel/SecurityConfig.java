@@ -73,6 +73,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login").permitAll().defaultSuccessUrl("/home.html",true); //esto es porque queremos utilizar nuestro propio login
+                .loginPage("/login").permitAll().defaultSuccessUrl("/Inicio",true); //esto es porque queremos utilizar nuestro propio login
     }
 }
