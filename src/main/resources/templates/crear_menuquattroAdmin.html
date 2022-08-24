@@ -71,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         
         <div class="mx-auto" >
-            <h2 class="logo"style="color: white; padding: 20px;">Nuevos Platillos</h2>
+            <h2 class="logo"style="color: white; padding: 20px;" th:text="#{resturante.platillan}">Nuevos Platillos</h2>
         </div>
 
 
@@ -89,21 +89,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <!-- Valor autoincremental en la base de datos -->
                         <input type="hidden" th:field="*{id}">                        
                         <div class="form-group mb-3 row">
-                            <label class="col-md-2 col-form-label" for="nombreplatillo">Platillo</label>
+                            <label class="col-md-2 col-form-label" for="nombreplatillo" th:text="#{resturante.platillo}">Platillo</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombreplatillo}" placeholder= "Platillo" id="nombreplatillo" aria-describedby="emailHelp">
                             </div>
                         </div>
 
                         <div class="form-group mb-3 row">
-                            <label class="form-control-sm col-form-label col-md-2" for="ingredientes">Descripcion</label>
+                            <label class="form-control-sm col-form-label col-md-2" for="ingredientes" th:text="#{categoria.descripcion}">Descripcion</label>
                             <div class="col-sm-10">
                                 <input type="text" th:field="*{ingredientes}" class="form-control form-control-sm col-md-6"  placeholder= "Descripcion" id="ingredientes" aria-describedby="emailHelp">
                             </div>
                         </div>
 
                         <div class="form-group mb-3 row">
-                            <label class="form-control-sm col-form-label col-md-2" for="precio">Precio</label>
+                            <label class="form-control-sm col-form-label col-md-2" for="precio" th:text="#{articulo.precio}">Precio</label>
                             <div class="col-sm-10">
                                 <input type="text" th:field="*{precio}" class="form-control form-control-sm col-md-6"  placeholder= "Precio" id="precio" aria-describedby="emailHelp">
                             </div>
@@ -121,7 +121,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         </div>
                         -->
                         
-                        <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
+                        <button type="submit" class="btn btn-primary" value="Guardar" th:text="#{accion.guardar}">Submit</button>
                     </form>
                     <p></p>
                 </div>    

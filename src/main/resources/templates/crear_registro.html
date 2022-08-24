@@ -27,35 +27,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                       >
                     <input type="hidden" th:field="*{id}">
                     <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="nombre">Nombre</label>
+                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="nombre" th:text="#{cliente.nombre}">Nombre</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}" placeholder="Nombre" id="nombres" aria-describedby="emailHelp">
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="apellidos">Apellidos</label>
+                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="apellidos" th:text="#{cliente.apellido}">Apellidos</label>
                         <div class="col-sm-10">
                             <input type="text" th:field="*{apellidos}" class="form-control form-control-sm col-md-6" placeholder="Apellidos" id="apellidos" aria-describedby="emailHelp">
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="email">Correo Electrónico</label>
+                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="email" th:text="#{cliente.correo}">Correo Electrónico</label>
                         <div class="col-sm-10">
                             <input type="text" th:field="*{email}" class="form-control form-control-sm col-md-6" placeholder="Email" id="email" aria-describedby="emailHelp">
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="password">Contraseña</label>
+                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="password" th:text="#{cliente.contraseña}">Contraseña</label>
                         <div class="col-sm-10">
                             <input type="text" th:field="*{password}" class="form-control form-control-sm col-md-6" placeholder="Password" id="password" aria-describedby="emailHelp">
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="usuarios">Usuarios</label>
+                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="usuarios"  th:text="#{cliente.usuario}">Usuarios</label>
                         <div class="col-sm-10">
                             <select th:field="*{usuarios}" class="form-control form-control-sm col-md-6" id="usuarios" aria-describedby="emailHelp">
                                 <option th:each="x:${usuarios}"
@@ -64,7 +64,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" value="Guardar">Registrar</button>
+                    <button type="submit" class="btn btn-primary" value="Guardar"  th:text="#{accion.registrar}">Registrar</button>
                 </form>
             </div>
         </div>

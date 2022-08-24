@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Registro</title>
+         <link rel="stylesheet" href="css/registro.css">
+         <meta http-equiv="Content-Type" content='text/html; charset=utf-8'/>
+    </head>
+    <body>
+        <header th:replace ></header>
+        <div class="container">
+            <h1 class="txt-fields" th:text="#{accion.registro}"> Registro </h1>
+            <form class="register-form">
+                <label class="col-fields">
+                    <span class="label-text" th:text="#{cliente.nombre}"> Nombre </span>
+                    <input type="text" name="nombre">
+                </label>
+                <label class="col-fields">
+                    <span class="label-text" th:text="#{cliente.apellidos}"> Apellidos </span>
+                    <input type="text" name="apellidos">
+                </label>
+                <label>
+                    <span class="label-text" th:text="#{cliente.correo}"> Correo Electrónico </span>
+                    <input type="text" name="correo">
+                </label>
+                <label class="password">
+                    <span class="label-text" th:text="#{cliente.contraseña}"> Contraseña </span>
+                    <button class="password2" title="password2" tabindex="-1">
+                        <span class="show password"></span>
+                    </button>
+                    <input type="password" name="password">
+                </label>
+                <div class="text-fields">
+                    <button class="submit" name="register" th:text="#{accion.registrarte}"> Registrarte </button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+

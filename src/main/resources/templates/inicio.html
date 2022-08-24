@@ -27,9 +27,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <!-- Vamos a crear una lista-->
                     <ul>
                         <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
-                        <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
+                        <li  ><a th:text="#{home.nav}" th:href="@{/Inicio}">Servicios</a></li>
                         <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
-                        <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                        <li ><a th:text="#{home.nav3}"  th:href="@{/preguntasFrecuentes}">Preguntas Frecuentes</a></li>
                         <li ><a th:text="#{home.nav4}" href="login">Iniciar Sesión</a></li>
                         <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
@@ -59,17 +59,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         para todos los gusto</p>
                 </div> 
                 <div class ="box feature-2" >
-                    <h4><a th:text="#{home.body3}" href="detallesRooms.html">HABITACIONES</a></h4>
+                    <h4><a th:text="#{home.body3}" th:href="@{/detallesRooms}">HABITACIONES</a></h4>
                     <p th:text="#{home.body3.1}" >Hermosas habitaciones diseñadas
                         para que pueda conectar con el
                         entorno natural y su magia</p>
                 </div> 
                 <div class ="box feature-3" >
-                    <h4><a th:text="#{home.body4}" href="eventos.html">EVENTOS</a></h4>
+                    <h4><a th:text="#{home.body4}" th:href="@{/eventos}">EVENTOS</a></h4>
                     <p th:text="#{home.body4.1}" >Realiza todos tus eventos con nosotros</p>
                 </div> 
                 <div class ="box feature-4" >
-                    <h4><a th:text="#{home.body5}" href="tours.html">TOURS</a></h4>
+                    <h4><a th:text="#{home.body5}" th:href="@{/toursS}">TOURS</a></h4>
                     <p th:text="#{home.body5.1}" >Toda la emoción con nuestras actividades</p>
                 </div> 
 
