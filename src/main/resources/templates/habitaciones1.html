@@ -19,18 +19,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <h1 class="logo"><a href="Inicio"> Hotel Palace</a></h1>
                         <!-- Vamos a crear una lista-->
                         <ul>
-                            <li><a href="Inicio">Menú Principal</a></li>
-                            <li><a href="habitacion">Habitaciones Más Detalles</a></li>
-                            <li><a href="reservahabitacionN">Reservar</a></li>
-                            <li><a href="nosotros">Nosotros</a></li>
-                            <li><a href="Inicio">Contactos</a></li>
-                            <li><a href="login">Salir</a></li>
+                            <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                            <li><a th:text="#{habitacion.mas}" href="habitacion">Habitaciones Más Detalles</a></li>
+                            <li><a th:text="#{accion.reservar1}" href="reservahabitacionN">Reservar</a></li>
+                            <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                            <li><a th:text="#{accion.salir}" href="logins.html">Salir</a></li>
                         </ul>
                     </div> 
                     <div class="showcase">
                         <div class="container">
-                            <h1>Habitaciones Hotel Palace </h1>   
-                            <p class="large">
+                            <h1 th:text="#{habitacion.texto}" >Habitaciones Hotel Palace </h1>   
+                            <p class="large" th:text="#{habitacion.textop}">
                                 Te ofrecemos diferentes opciones.</p>
                         </div>
                     </div>
@@ -39,16 +38,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <!-- Feautures-->
             <section id="features">
                 <div class ="box feature-1" >
-                    <h4><a href="habitacion">SENCILLA</a></h4>              
+                    <h4><a href="habitacion" th:text="#{habitacion.sencilla1}">SENCILLA</a></h4>              
                 </div> 
                 <div class ="box feature-2" >
-                    <h4><a href="habitacion">FAMILIAR</a></h4>
+                    <h4><a href="habitacion" th:text="#{habitacion.familiar1}">FAMILIAR</a></h4>
                 </div> 
                 <div class ="box feature-3" >
-                    <h4><a href="habitacion">DOBLE 2 CAMAS</a></h4>                 
+                    <h4><a href="habitacion" th:text="#{habitacion.doble2}">DOBLE 2 CAMAS</a></h4>                 
                 </div> 
                 <div class ="box feature-4" >
-                    <h4><a href="habitacion">DOBLE 1 CAMA</a></h4>
+                    <h4><a href="habitacion" th:text="#{habitacion.doble1}">DOBLE 1 CAMA</a></h4>
                 </div> 
             </section>
             <div class ="clear"></div>
