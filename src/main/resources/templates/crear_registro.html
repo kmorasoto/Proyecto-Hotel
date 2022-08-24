@@ -21,7 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <nav id = "navbar" class="py-30">
                     <div class="container1">
                         <!--Header 1 -->
-                        <h1 class="logo"><a href="#"> Hotel Palace</a></h1>
+                        <h1 class="logo"><a href="Inicio"> Hotel Palace</a></h1>
                         <!-- Vamos a crear una lista-->
                         <ul>                         
                             <li><a href="login">Salir</a></li>
@@ -58,8 +58,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </label>
                 <div class="text-fields">
                    <button type="submit" class="btn btn-primary" value="Guardar">Registrarme</button>  
-                </div>
+                
+                <div style="color: black" class="modal fade"  id="miModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true" data-bs-backdrop="static" >
+                        <div class="modal-dialog "> 
+                            <div class ="modal-content ">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitle" style="color: black">Registro Agregado.</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Su guardó exitosamente.</p>
+                                </div>
+                                <div class="modal-footer">
+                                   
+                                    <a class ="btn btn-secondary" href="login">Aceptar</a>
+                               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
             </form>
         </div>
     </body>
+     <footer class="page-footer font-small white">
+        <div style="color: white" class="text-center py-3">
+            <p>&copy; 2022 Hotel Palace</p>
+        </div>       
+    </footer>
 </html>
