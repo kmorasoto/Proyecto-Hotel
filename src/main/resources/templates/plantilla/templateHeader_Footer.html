@@ -4,7 +4,7 @@
 
     <head th:fragment="TempHead">
         <title></title>
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/Home.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -15,22 +15,31 @@
         
         <header th:fragment="TempHeader">
 
-            <nav class="navbar" style="background-color: #183254;">
-                <div class="container">
+               <div>
+            <form name="f" th:action="@{/Inicio}" method="post">
+            </form>
+            <!-- Este es para crear la cabecera o sea la parte de arriba-->
+            <header th:fragment="header">
+                <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
+                <nav id = "navbar" class="py-30">
+                    <div class="container">
                     <!--Header 1 -->
-                    <h1 class="logo"><a href="home.html"><a> Hotel Palace</a></h1>
-              
+                    <h1 class="logo"><a> Hotel Palace</a></h1>
+                    <!-- Vamos a crear una lista-->
                     <ul>
-                        <li th:text="#{home.menu}" > <a  href="Home.html">Menú Principal</a></li>
-                        <li th:text="#{home.nav}" ><a href="Home.html">Servicios</a></li>
-                        <li th:text="#{home.nav2}"><a href="acerca_de.html">Nosotros</a></li>         
-                        <li th:text="#{home.nav3}"><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                        <li th:text="#{home.nav4}"><a href="login.html">Iniciar Sesión</a></li>
-
-
+                        <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                        <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
+                        <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                        <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                        <li ><a th:text="#{home.nav4}" href="login">Iniciar Sesión</a></li>
+                        <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                              th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
+                             <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>
+                   
+                  
+                            
                     </ul>
-                </div> 
-            </nav>
         </header>
 
 

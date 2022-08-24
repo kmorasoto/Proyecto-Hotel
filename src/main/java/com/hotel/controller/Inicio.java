@@ -12,8 +12,14 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author dell
  */@Controller
 public class Inicio {
+     
      @GetMapping ("/Inicio")
     public String index(){
     return "/Inicio";
+    } 
+    
+    @GetMapping ("/nosotros")
+    public String nosotros(){
+    return "/nosotros";
     } 
 }
