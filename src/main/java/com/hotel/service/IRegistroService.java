@@ -4,7 +4,7 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Registros;
+import com.hotel.entity.Registro;
 import java.util.List;
 
 
@@ -13,11 +13,13 @@ import java.util.List;
  *
  * @author Daniela
  */
-public interface IRegistrosService {
-    public List<Registros> getAllRegistros();
-    public Registros getRegistrosById(long id);
-    public void saveRegistros (Registros Registros);
+public interface IRegistroService {
+    
+    public List<Registro> listRegistro();
+    public List<Registro> getAllregistro();
+    public Registro getregistroById(long id);
+    public void saveregistro (Registro registro);
     public void delete (long id);
-    public Registros findByNombre (String nombre);
+    public Registro findBynombre (String nombre);
   
 }

@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 	margin: 0;
 	padding: 0;
 }
-body{
+#body{
 	background: url(../images/hotel-vistalmar.jpg) center;
 	background-size: cover;
 	color: #183254;
@@ -160,4 +160,64 @@ html{/*Para que la imagen se vea completa de un tamaño correcto en el backgroun
 
 .text-fields{ /*para que el registrate esté centrado*/
 	text-align: center;
+}
+
+.container1{
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding:  15 50px; 
+}
+
+.py-30{
+    padding: 30px 0;
+}
+
+/*Logo Navbar*/
+#navbar .logo{
+    font-size: 37px;
+    float: left;
+}
+
+ /*Logo*/
+#navbar h1 a{
+    color:#fff;   
+}
+
+ /*Correr los nombres de la lista hacia la derecha*/
+#navbar ul{
+    float: right;
+    list-style: none;
+}
+
+ /*Alinear la lista, y centrarlos*/
+
+#navbar ul li{
+    float: left;
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+#navbar ul li a{
+     float: left;
+    text-align: center;
+    display: block;
+    color: #fff;
+    text-decoration: none; 
+}
+
+#navbar ul li a.current{
+   color: #A28424;
+}
+
+ /*Cuando pase el mouse encima de la lista de Servicios etc cambie de color*/
+#navbar ul li a:hover {
+    color: #A28424;
+}
+
+.page-footer {
+    text-align: center;
+    position: bottom;
+    padding: 750px;
 }

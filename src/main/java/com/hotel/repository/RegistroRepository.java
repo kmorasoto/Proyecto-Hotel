@@ -4,7 +4,7 @@
  */
 package com.hotel.repository;
 
-import com.hotel.entity.Registros;
+import com.hotel.entity.Registro;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
  * @author Daniela
  */
 @Repository
-public interface RegistrosRepository extends CrudRepository<Registros,Long>{
-    Registros findByNombre (String nombre); //Esto es para obtener una fila de nuestra BD, es como hacer un select.
+public interface RegistroRepository extends CrudRepository<Registro,Long>{
+    Registro findByNombre (String nombre); //Esto es para obtener una fila de nuestra BD, es como hacer un select.
 }

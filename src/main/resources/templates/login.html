@@ -17,40 +17,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container">            
             <div style="width:600px;margin-left: auto;margin-right: auto;margin-top:350px;padding: 24px;">                
                 <div class="card">                    
-                    <div class="card-header"th:text="#{mensajes.login}">                        
+                    <div class="card-header">                        
                         <i class="fa fa-user"></i> Bienvenido al Hotel Palace! Por favor iniciar sesión.
                     </div>                    
                     <div class="card-block" style="padding: 24px;">                        
                         <form name="f" th:action="@{/login}" method="post">                            
                             <fieldset>                                
                                 <!-- Thymeleaf + Spring Security error display -->                                
-                                <div th:if="${param.error}" class="alert alert-danger" th:text="#{cliente.invalidos}">                                    
+                                <div th:if="${param.error}" class="alert alert-danger">                                    
                                     Usuario y contraseña inválidos.
                                 </div>                                
-                                <div th:if="${param.logout}" class="alert alert-success" th:text="#{cliente.cerrarsesión}">                                    
+                                <div th:if="${param.logout}" class="alert alert-success">                                    
                                     Se ha cerrado la sesión.
                                 </div>                                
                                 <!-- Login Controls -->                                
                                 <div class="form-group">                                    
-                                    <label for="txtUsername" th:text="#{cliente.usuario}">Usuario</label>                                    
+                                    <label for="txtUsername">Usuario</label>                                    
                                     <input type="text" class="form-control" id="username" name="username"                                           
                                            placeholder="Username">                                
                                 </div>                                
                                 <div class="form-group">                                    
-                                    <label for="txtPassword"th:text="#{cliente.contraseña}">Contraseña</label>                                    
+                                    <label for="txtPassword">Contraseña</label>                                    
                                     <input type="password" class="form-control" id="password" name="password"                                           
                                            placeholder="Password">                                
                                 </div>                                
                                 <div class="form-check">                                    
                                     <input type="checkbox" class="form-check-input" id="checkRememberMe" name="checkRememberMe">                                    
-                                    <label class="form-check-label" for="checkRememberMe" th:text="#{accion.recordar}">Recuérdame?</label>                           
+                                    <label class="form-check-label" for="checkRememberMe">Recuérdame?</label>                                
                                 </div>               
-                                <div class="signup" th:text="#{accion.registrarse}">
-                                     Registrarse? <a href="registro.html"th:text="#{accion.registrate}" >Registrate aquí</a>
+                                <div class="signup">
+                                     Registrarse? <a href="registroN">Registrate aquí</a>
                                 </div>  
                                 <!-- Login Button -->                                
                                 <div class="form-actions" style="margin-top: 12px;">                                    
-                                    <button type="submit" class="btn btn-success"th:text="#{accion.iniciar}">Iniciar Sesión</button>                                
+                                    <button type="submit" class="btn btn-success">Iniciar Sesión</button>                                
                                 </div>                            
                             </fieldset>                        
                         </form>                    
