@@ -66,10 +66,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         
         http.authorizeRequests()
-                .antMatchers("/inicio","/registros","/login","/registrosN","/", "/reservaevento") //tiene acceso a  estos enpoints si tiene el role de ADMIN
+                .antMatchers("/Inicio","/inicioAdmin","/registro","/reservaevento",
+                        "/reservasakura","/reservaquattro","/reservatour",
+                        "menusakuraAdmin","/menuquattroAdmin","/habitacion",
+                        "/reservahabitacion","habitacionesAdmin") //tiene acceso a  estos enpoints si tiene el role de ADMIN
                 .hasRole("ADMIN")
-                .antMatchers("/Home.html","/","/login") //a estos enpoints pueden ir cualquiera que tengan los siguientes roles
-                .hasAnyRole("USER","VENDEDOR","ADMIN")     
+                .antMatchers("/Inicio","/login","/habitaciones1","/habitacion",
+                        "/reservahabitacionN","/restauranteSakura","/menusakura",
+                        "/restauranteQuattro","/menuquattro","/reservasakuraN",
+                        "/reservaquattroN","/eventos","/reservaeventoN","/preguntasFrecuentes",
+                        "/nosotros","/toursS","/reservatour") //a estos enpoints pueden ir cualquiera que tengan los siguientes roles
+                .hasAnyRole("USER","ADMIN")     
                 //.anyRequest().authenticated()
                 .and()
                 .formLogin()

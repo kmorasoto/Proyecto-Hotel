@@ -3,8 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org"
-   xmlns:sec="http://www.thymeleaft.org/extras/spring-security"   >
+<html xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="head-nav">
         <title>Home | Bienvenidos</title>
         <link rel="stylesheet" href="css/home.css">
@@ -26,9 +25,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
                         <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
                         <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
-                        <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                        <li ><a th:text="#{home.nav4}" href="login">Salir</a></li>
-                            
+                        <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
+                        <li ><a th:text="#{home.nav4}" href="login">Cerrar Sesión</a></li>
+                        <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                              th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
+                             <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>    
                     </ul>
                 </div> 
                     

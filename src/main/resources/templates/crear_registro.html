@@ -37,6 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                   th:action="@{/saveregistro}"
                   method="POST"
                   >
+                <input type="hidden" th:field="*{id}">
                 <label class="col-fields">
                     <span class="label-text"> Nombre </span>
                     <input type="text" class="form-control form-control-sm col-md-5" th:field="*{nombre}" placeholder="nombre">

@@ -50,7 +50,7 @@ public class ReservaHabitacionController {
     @PostMapping("/savehabitacion")
     public String guardarReservaHabitacion (@ModelAttribute ReservaHabitacion reservahabitacion){
        reservahabitacionService.saveReservaHabitacion(reservahabitacion);
-       return "redirect:/Home.html";
+       return "redirect:/Inicio";
     }
     
     @GetMapping("/editreservahabitacion/{id}")

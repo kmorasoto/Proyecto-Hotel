@@ -45,7 +45,7 @@ public class RegistroController {
     @PostMapping("/saveregistro")
     public String guardarRegistro (@ModelAttribute Registro registro){
         registroService.saveregistro(registro);
-        return "redirect:/registro";    
+        return "redirect:/login";    
     }
     
     @GetMapping("/editregistro/{id}")
