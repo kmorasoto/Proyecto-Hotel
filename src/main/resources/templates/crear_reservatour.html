@@ -12,52 +12,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body style="background-color: #183254;">
         <header th:replace="plantilla/templateHeader_Footer::TempHeader"></header>
 
+
+
+
         <div class="card">
-            <div class="card-body">      
+            <div class="card-body">
+
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>                
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/Sicilia.jpg" class="d-block w-100" alt="...">
+                            <img src="images/rafting.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Sicilia</h5>
-                                <p></p>
+                                <h5>Rafting</h5>
+                                <p style="backdrop-filter: blur(5px);">Una aventura de medio día en el río Naranjo. Rápidos de clase lll/lV al largo del cañon Naranjo.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Bolonia.jpg" class="d-block w-100" alt="...">
+                            <img src="images/snorkeling.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Bolonia</h5>
-                                <p></p>
+                                <h5>Snorkeling</h5>
+                                <p style="backdrop-filter: blur(5px);">Ayude a restaurar el precioso sistema de arrecifes de Costa Rica con nuestra exclusiva experiencia para huéspedes</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="images/Milano.jpg" class="d-block w-100" alt="...">
+                            <img src="images/horse_riding.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Milano</h5>
-                                <p></p>
+                                <h5>Horse Riding</h5>
+                                <p style="backdrop-filter: blur(5px);">Expediciones al largo de nuestras hermosas playas, bosques lluviosos y más</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="images/Parma.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Parma</h5>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/Florencia.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Florencia</h5>
-                                <p></p>
-                            </div>
-                        </div>                
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -70,8 +58,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         <div class="mx-auto" >
-            <h2 class="logo"style="color: white; padding: 20px;">Reservas Quattro</h2>
+            <h2 class="logo"style="color: white; padding: 20px;">Reservas de Tour</h2>
         </div>
 
         <div class="container" style="color: white;">
@@ -100,7 +99,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <input type="text" class="form-control form-control-sm col-md-6" th:field="*{pax}" placeholder= "Pax" id="pax" aria-describedby="emailHelp">
                             </div>
                         </div>                        
-                        
+
                         <div class="form-group mb-3 row">
                             <label class="form-control-sm col-form-label col-md-2" for="telefono">Telefono</label>
                             <div class="col-sm-10">
