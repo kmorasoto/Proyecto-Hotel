@@ -8,6 +8,7 @@ import com.hotel.entity.Habitacion;
 import com.hotel.service.IHabitacionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,7 +19,8 @@ import org.springframework.web.bind.annotation.PostMapping;
  *
  * @author Daniela
  */
-public class HabitacionAdminController {
+@Controller
+public class HabitacionControllerAdmin {
     
     @Autowired
     private IHabitacionService habitacionService;
@@ -29,7 +31,7 @@ public class HabitacionAdminController {
         model.addAttribute("titulo", "Habitaciones Disponibles");
         model.addAttribute("habitacion", listahabitacion);
         return "habitacionAdmin";       
-    }   
+    }
     
     @GetMapping("/habitacionNAdmin")
     public String crearHabitacion(Model model){
@@ -38,28 +40,23 @@ public class HabitacionAdminController {
     }
     
     @PostMapping("/saveroomAdmin")
-    public String guardarHabitacion (@ModelAttribute Habitacion habitacion){
+    public String guardarHabitacionAdmin (@ModelAttribute Habitacion habitacion){
         habitacionService.savehabitacion(habitacion);
         return "redirect:/habitacionAdmin";
     }
-    
-     @PostMapping("/saveroomAdmin")
-    public String guardarHabitacionN (@ModelAttribute Habitacion habitacion){
-        habitacionService.savehabitacion(habitacion);
-        return "redirect:/habitacion";
-    }
-    
+       
     @GetMapping("/edithabitacionAdmin/{id}")
-    public String editarHabitacion(@PathVariable("id") Long idHabitacion, Model model){
-        Habitacion habitacion = habitacionService.gethabitacionById(idHabitacion);
-        model.addAttribute("HabitacionAdmin", habitacion);
+    public String editarHabitacion(@PathVariable("id") Long idhabitacion, Model model){
+        Habitacion habitacion = habitacionService.gethabitacionById(idhabitacion);
+        model.addAttribute("habitacionAdmin", habitacion);
         return "crear_roomAdmin";
     }
+    
     
     @GetMapping("/deletehabitacionAdmin/{id}")
     public String eliminarHabitacion(@PathVariable("id") Long idHabitacion){
         habitacionService.delete(idHabitacion);
         return "redirect:/habitacionAdmin";
     }
-    
+  
 }

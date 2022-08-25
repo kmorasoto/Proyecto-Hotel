@@ -16,11 +16,12 @@ import javax.persistence.Table;
  * @author Daniela
  */
 @Entity
-@Table (name = "habitaciones")
+@Table(name = "habitaciones")
 public class Habitacion implements Serializable {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
     private String habitacion;
     private String descripcion;
@@ -41,15 +42,15 @@ public class Habitacion implements Serializable {
     public void setHabitacion(String habitacion) {
         this.habitacion = habitacion;
     }
-    
-       public double getPrecio() {
+
+    public double getPrecio() {
         return precio;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
+
     public String getDescripcion() {
         return descripcion;
     }
@@ -57,5 +58,5 @@ public class Habitacion implements Serializable {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-   
+
 }

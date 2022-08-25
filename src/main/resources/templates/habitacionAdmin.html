@@ -19,15 +19,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <nav id="navbar" class="py-30">
                     <div class="container">
                         <!--Header 1 -->
-                        <h1 class="logo"><a href="Inicio">Hotel Palace</a></h1>
+                        <h1 class="logo"><a href="inicioAdmin">Hotel Palace</a></h1>
 
                         <ul>
-                            <li><a href="Inicio">Menú Principal</a></li>
+                            <li><a href="inicioAdmin">Menú Principal</a></li>
                             <li><a href="reservahabitacionN">Reservar Habitación</a></li>
                             <li><a href="nosotros">Nosotros</a></li>
                             <li><a href="Inicio">Contactos</a></li>
                             <li><a href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
                             <li><a href="login">Salir</a></li>
+                            <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                              th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
+                             <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>
                         </ul>
                     </div>             
 
@@ -64,7 +68,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                         <!-- el thymeleaf block lo que va a hacer es ejecutar cierta lógica o cierto código basada en los parámetros que nosotros le enviemos -->
                         <!-- el thymeleaf each: Por cada usuario en personas (por cada objeto que tenemos en nuestra lista de personas) quiero que me haga lo siguiente -->
-                    <th:block th:each="user : ${habitacionAdmin}">
+                    <th:block th:each="user : ${habitacion}">
                         <tr class="table-primary">
                             <!-- El texto lo voy a sustituir por el user.getNombre, que este caso trae de la BD el Nombre de la persona 
                             esto se llama del método que está en nuestra entidad -->
@@ -72,7 +76,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <td th:text="${user.getDescripcion}"></td>
                             <td th:text="${user.getPrecio}"></td>
                             <td>
-                                    <a th:href="@{/edithabitacionAdmin/{id}(id=${user.getId})}">Editar</a>
+                                    <a th:href="@{/edithabitacionAdmin/{id}(id=${user.getHabitacion})}">Editar</a>
                             </td>
 
                             <td>
