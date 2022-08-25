@@ -27,6 +27,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
                             <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                             <li ><a th:text="#{home.nav4}" href="login">Iniciar Sesión</a></li>
+                            <li ><a th:text="#{accion.editarreserva}" href="reservaevento">Editar reservas</a></li>
+
                         </ul>
                     </div>  
 
@@ -46,19 +48,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title" th:text="#{eventos.bodavintage}">BODAS VINTAGE</h3>
-                            <p  class="box__txt" th:text="#{eventos.bodavintagep}">Con mobiliario antiguo y restaurado</p>
+                            
+                            <p  class="box__txt" th:text="#{eventos.bodavintagep}">Con mobiliario antiguo y restaurado
+                                
+                            </p>
+                            <br>
+                                
+                            <p class="box__p" th:text="#{articulo.precioE}">Precio $100 </p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title" th:text="#{eventos.bodaplaya}">BODAS DE PLAYA</h3>
+                            
                             <p class="box__txt" th:text="#{eventos.bodaplayap}">Al aire libre con la mejor playa de costa rica</p>
+                             <br>
+                                
+                            <p class="box__p" th:text="#{articulo.precioE2}">Precio $100 </p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title" th:text="#{eventos.bodashabbychic}">BODA SHABBY CHIC</h3>
                             <p class="box__txt" th:text="#{eventos.bodashabbychicp}">Una mezcla de elementos antiguos con modernos</p>
+                         <br>
+                                
+                            <p class="box__p" th:text="#{articulo.precioE1}">Precio $100 </p>
                         </div>
                     </div>
                    <a href="reservaeventoN" class="reservar_btn" th:text="#{accion.reservar}">RESERVAR</a>
@@ -77,21 +92,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class="box__content">
                             <h3 class="box__title">Baby Showers</h3>
                             <p class="box__txt" th:text="#{eventos.babyshower}">Celebra la llegada de tu bebé con nosotros</p>
+                             <br>
+                               <br> 
+                            <p class="box__p" th:text="#{articulo.precioE2}">Precio $100 </p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title" th:text="#{eventos.bautizos}">Bautizos</h3>
                             <p class="box__txt" th:text="#{eventos.bautizosp}">Festeja que el pequeño ha recibido el sagrado sacramento </p>
+                         <br>
+                                
+                            <p class="box__p" th:text="#{articulo.precioE}">Precio $100 </p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box__content">
                             <h3 class="box__title" th:text="#{eventos.revelacion}">Revelación de género</h3>
                             <p class="box__txt" th:text="#{eventos.revelacionp}">Viví la emoción de descubrir si su bebé será niño o niña.</p>
+                         <br>
+                              <br>  
+                            <p class="box__p" th:text="#{articulo.precioE1}">Precio $100 </p>
                         </div>
-                        <a href="reservaeventoN" class="reservar_btnB" th:text="#{accion.reservar}">RESERVAR</a>
+                        <a href="reservaeventoNB" class="reservar_btnB" th:text="#{accion.reservar}">RESERVAR</a>
                     </div>
+                  </div>
             </section>
             <footer id="mainfooter" class="py-30">
                 <p>&copy; 2022 Hotel Palace</p>

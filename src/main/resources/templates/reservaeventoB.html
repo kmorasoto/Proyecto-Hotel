@@ -29,18 +29,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </tr>
             </thead>
             <tbody>
-            <th:block th:each="user : ${reservaevento}">
+            <th:block th:each="user : ${reservaeventoB}">
                 <tr>
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getTelefono}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getFecha}"></td>
-                    <td th:text="${user.getEvento.getEvento}"></td>
+                    <td th:text="${user.getEventobaby.getEventobaby}"></td>
                     <td>
-                        <a th:href="@{/editreservaevento/{id}(id=${user.getId})}" th:text="#{accion.editar}">Editar</a>
+                        <a th:href="@{/editreservaeventoB/{id}(id=${user.getId})}" th:text="#{accion.editar}">Editar</a>
                     </td>
                     <td>
-                        <a th:href="@{/deleteevento/{id}(id=${user.getId})}" th:text="#{accion.eliminar}">Eliminar</a>
+                        <a th:href="@{/deleteeventobaby/{id}(id=${user.getId})}" th:text="#{accion.eliminar}">Eliminar</a>
                     </td>
                 </tr>
             </th:block>

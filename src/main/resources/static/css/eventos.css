@@ -173,6 +173,11 @@ p{
   
 }
 
+.box__p {
+  color: #999;
+  
+}
+
 .container-design, .container-tips{
     display: flex;
     flex-wrap: wrap; 
