@@ -17,10 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-/**
- *
- * @author dell
- */
+
 @Controller
 public class ReservaEventoController {
         
@@ -33,7 +30,6 @@ public class ReservaEventoController {
   
     
     @GetMapping("/reservaevento")
-    
     public String index(Model model) {
         List<ReservaEvento> listaReservaEvento = reservaeventoService.getAllReservaEvento();
         model.addAttribute("titulo", " Reservas para Eventos");

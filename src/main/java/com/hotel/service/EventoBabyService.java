@@ -4,10 +4,10 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Evento;
-import com.hotel.entity.restSakura;
+
+import com.hotel.entity.EventoBaby;
+import com.hotel.repository.EventoBabyRepository;
 import com.hotel.repository.EventoRepository;
-import com.hotel.repository.restSakuraRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,16 +15,18 @@ import org.springframework.stereotype.Service;
 /**
  *
  * @author dell
- */@Service
-public class EventoService implements IEventoService{
-      @Autowired
-    private EventoRepository eventoRepository;
+ */
+@Service
+public class EventoBabyService implements IEventoBabyService {
+    @Autowired
+    private EventoBabyRepository eventobabyRepository;
     
     @Override
-    public List<Evento> listEvento1(){
-        return (List<Evento>)eventoRepository.findAll();
+    public List<EventoBaby> listEvento2(){
+        return (List<EventoBaby>)eventobabyRepository.findAll();
     }
 
   
+    
     
 }
