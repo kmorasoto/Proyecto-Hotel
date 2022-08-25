@@ -22,11 +22,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <h1 class="logo"><a href="Inicio">Hotel Palace</a></h1>
 
                         <ul>
-                            <li><a th:text="#{home.menu}"  href="Inicio">Menú Principal</a></li>
+                            <li><a th:text="#{home.menu}"  th:href="@{/Inicio}">Menú Principal</a></li>
                             <li><a th:text="#{accion.reservar1}" href="reservahabitacionN">Reservar Habitación</a></li>
-                            <li><a th:text="#{home.nav2}" href="nosotros">Nosotros</a></li>                         
-                            <li><a th:text="#{home.nav3}" href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
-                            <li><a th:text="#{accion.salir}" href="login">Salir</a></li>
+                            <li><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>                         
+                            <li><a th:text="#{home.nav3}" th:href="@{/preguntasFrecuentes}">Preguntas Frecuentes</a></li>
+                            <li><a th:text="#{accion.salir}" th:href="@{/logins}">Salir</a></li>
                              <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
                              <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"

@@ -51,7 +51,7 @@ public class reservaQuattroController {
     @PostMapping("/savereservaquattro")
     public String guardarreservaQuattro(@ModelAttribute reservaQuattro reservaquattro){
         reservaquattroService.savereservaQuattro(reservaquattro);
-        return "redirect:/restauranteQuattro.html";    
+        return "redirect:/Inicio";    
     }
     
     @GetMapping("/editreservaQuattro/{id}")

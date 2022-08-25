@@ -23,7 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li><a th:text="#{habitacion.mas}" href="habitacion">Habitaciones Más Detalles</a></li>
                             <li><a th:text="#{accion.reservar1}" href="reservahabitacionN">Reservar</a></li>
                             <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
-                            <li><a th:text="#{accion.salir}" href="login">Cerrar Sesión</a></li>
+                            <li><a th:text="#{accion.salir}" th:href="@{/logins}">Salir</a></li>
                             <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
                              <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"

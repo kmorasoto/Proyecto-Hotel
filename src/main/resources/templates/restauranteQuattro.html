@@ -20,10 +20,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>  
 
     <body>
-        <th:block th:each="user : ${restauranteQuattro}">
-</th:block>
-            <header th:fragment="header">
-
+        <form name="f" th:action="@{/restauranteQuattro}" method="post">
+        </form>
+        <header th:fragment="header">
             <nav id = "navbar" class="py-30" >
                 <div class="container">
                     <!--Header 1 -->
@@ -31,11 +30,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                     <ul>
                         <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
-                        <!-- comment <li><a th:text="#{restaurante.sakura}" th:href="@{/restauranteSakura}"">Restaurante Sakura</a></li>-->
-                        <li><a href="menuquattro">Menú Quattro</a></li>
-                        <li><a href="reservaquattroN">Crear Reserva</a></li>
+                        <li><a th:text="#{restaurante.sakura}" th:href="@{/restauranteSakura}">Restaurante Sakura</a></li>
+                        <li><a th:text="#{home.menu2}" href="menuquattro">Menú Quattro</a></li>
+                        <li><a th:text="#{accion.creare}" href="reservaquattroN">Crear Reserva</a></li>
                         <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>  
-                        <li><a th:text="#{accion.salir}" href="logins.html">Salir</a></li>
+                        <li><a href="login.html">Salir</a></li>
                     </ul>
                 </div> 
             </nav> 
@@ -44,11 +43,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="showcase">
             <div class="container">
                 <h1 th:text="#{restaurante.quattro}">Restaurante Quattro</h1>                         
-                <div style="backdrop-filter: blur(5px); color: white;">
-                    <p>Nuestro restaurante Quattro te cautivara con una oferta de comida auténtica Italiana.
-                        Viva la experiencia de saborear nuestros delicios platillos.
-                    </p>
-                </div>
             </div>      
         </div>
 

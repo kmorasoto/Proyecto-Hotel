@@ -51,7 +51,7 @@ public class reservatourController {
     @PostMapping("/savereservatour")
     public String guardarreservatour(@ModelAttribute reservatour reservatour){
         reservatourService.savereservatour(reservatour);
-        return "redirect:/restauranteSakura.html";    
+        return "redirect:/Inicio";    
     }
     
     @GetMapping("/editreservatour/{id}")

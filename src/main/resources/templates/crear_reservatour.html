@@ -126,7 +126,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
+                        <button th:text="#{accion.guardar}" class="btn btn-primary" data-bs-toggle="modal" 
+                                data-bs-target="#miModal" type="button"  value="Guardar">Guardar</button>  
+
+                        <div style="color: black" class="modal fade"  id="miModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true" data-bs-backdrop="static" >
+                            <div class="modal-dialog "> 
+                                <div class ="modal-content ">
+                                    <div class="modal-header">
+                                        <h5  th:text="#{mensajes.exitoso2}" class="modal-title" id="modalTitle" style="color: black">Reserva realizada </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p th:text="#{mensajes.exitoso}"> Su reserva se realizó exitosamente</p>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <!--  <a  th:text="#{accion.aceptar}"cla   ss ="btn btn-secondary" th:href="@{/Inicio}">Aceptar</a> -->
+                                        <button type="submit" class="btn btn-secondary" value="Guardar" th:href="@{/Inicio}">Aceptar</button>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
 
 

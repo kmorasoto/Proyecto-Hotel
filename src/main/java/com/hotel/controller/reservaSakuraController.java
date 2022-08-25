@@ -51,7 +51,7 @@ public class reservaSakuraController {
     @PostMapping("/save")
     public String guardarreservaSakura(@ModelAttribute reservaSakura reservasakura){
         reservasakuraService.savereservaSakura(reservasakura);
-        return "redirect:/restauranteSakura.html";    
+        return "redirect:/Inicio";    
     }
     
     @GetMapping("/editreservaSakura/{id}")
