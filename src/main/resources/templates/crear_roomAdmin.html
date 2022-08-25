@@ -66,8 +66,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container" style="color: white;">
             <!-- Formulario -->
             <div class="container">
-                <form th:object ="${habitacionAdmin}"
-                      th:action="@{/saveroomAdmin}"
+                <form th:object ="${habitacion}"
+                      th:action="@{/saveroom}"
                       method="POST"
                       >
                     <input type="hidden" th:field="*{id}">
