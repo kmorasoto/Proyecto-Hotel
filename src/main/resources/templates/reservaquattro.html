@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html xmlns:th="http://www.thymeleaf.org"> 
 
     <!-- UTILIZAMOS FRAGMENT PARA REUTILIZAR EL CODIGO EN OTRAS HTML -->
-    <head th:replace="plantilla/templateHeader_Footer::TempHead"></head>
+    <head th:fragment="head-nav"></head>
     
     <!-- comment 
     <head>
@@ -20,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     
     <body>        
     
-        <header th:replace="plantilla/templateHeader_Footer::TempHeader"></header>
+        <header th:fragment="header-nav"></header>
 
         <!-- AQUI ESTAMOS APLICANDO EL NAV BAR DE TEMPLATE <header></header> -->
        <!-- comment
@@ -85,6 +85,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </table>
 </body>
 
-<footer th:replace="plantilla/templateHeader_Footer::TempFooter"></footer>
+<footer th:replace="plantilla/template.final::TempFooter"></footer>
 
 </html>

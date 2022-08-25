@@ -3,50 +3,19 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org"> 
-
-    <!-- UTILIZAMOS FRAGMENT PARA REUTILIZAR EL CODIGO EN OTRAS HTML -->
-    <head th:replace="plantilla/templateHeader_Footer::TempHead"></head>
-    
-    <!-- comment 
-    <head>
-        <title> Sakura </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template.final::head-nav">
+        <title>Crear_reserva</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href ="css/bootstrap">
     </head>
-    -->
-    
-    <body>        
-    
-        <header th:replace="plantilla/templateHeader_Footer::TempHeader"></header>
 
-        <!-- AQUI ESTAMOS APLICANDO EL NAV BAR DE TEMPLATE <header></header> -->
-       <!-- comment
-        <header th:fragment="header">
+    <body style="background-color: #183254;">        
 
-            <nav id = "navbar" class="py-30">
-                <div class="container">
-                    <!--Header 1 
-                    <h1 class="logo"><a href="home.html"> Hotel Palace</a></h1>
+        <header th:replace="plantilla/template.final::header-nav"></header>
 
-                    <ul>
-                        <li><a href="Home.html" class="current">Menú Principal</a></li>
-                       
-                           
-                        <li><a href="Home.html">Servicios</a></li>
-                        <li><a href="acerca_de.html">Nosotros</a></li>
-                        <li><a href="Home.html">Contactos</a></li>
-                        <li><a href="login.html">Salir</a></li>
-                        
-                        
-                    </ul>
-                </div> 
-            </nav> 
-        </header>
-        -->
-        
         <!-- EL PARAMETRO TITULO LO TRAEMOS DESDE EL CONTROLLER Y UTILIZAMOS SIGNO DE $ -->
         <h1 th:text="${titulo}"></h1>
 
@@ -54,7 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- comment  <h1 th:text="#{cliente.nombre}"></h1>  -->
 
         <!-- AQUI CREAMOS UNA TABLA -->
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover" >
 
             <thead class="table-striped">
                 <tr>
@@ -83,8 +52,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </th:block>
         </tbody>
     </table>
+
 </body>
 
-<footer th:replace="plantilla/templateHeader_Footer::TempFooter"></footer>
+<footer  th:replace="plantilla/template.final::TempFooter"></footer>
 
 </html>

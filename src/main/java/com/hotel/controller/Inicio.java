@@ -81,6 +81,7 @@ public class Inicio {
      @GetMapping ("/restauranteSakura")
     public String restauranteSakura(){
     return "/restauranteSakura";
+    
     }
     
      @GetMapping ("/toursS")

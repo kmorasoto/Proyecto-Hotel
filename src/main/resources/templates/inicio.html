@@ -5,13 +5,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaft.org/extras/spring-security"> 
-    
+
     <head>
         <title>Home | Bienvenidos</title>
         <link rel="stylesheet" href="css/home.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
     </head>
     <body>
         <div>
@@ -22,25 +22,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
                 <nav id = "navbar" class="py-30">
                     <div class="container">
-                    <!--Header 1 -->
-                    <h1 class="logo"><a> Hotel Palace</a></h1>
-                    <!-- Vamos a crear una lista-->
-                    <ul>
-                        <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
-                        <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
-                        <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
-                        <li ><a th:text="#{home.nav3}" th:href="@{/preguntasFrecuentes}">Preguntas Frecuentes</a></li>
-                        <li ><a th:href="@{/inicioAdmin}">Admin</a></li>
-                        <li ><a th:text="#{home.nav4}" href="login">Cerrar Sesión</a></li>
-                        <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                              th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
-                             <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>
-                   
-                  
-                            
-                    </ul>
-                </div> 
+                        <!--Header 1 -->
+                        <h1 class="logo"><a> Hotel Palace</a></h1>
+                        <!-- Vamos a crear una lista-->
+                        <ul>
+                            <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                            <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
+                            <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                            <li ><a th:text="#{home.nav3}" th:href="@{/preguntasFrecuentes}">Preguntas Frecuentes</a></li>
+                            <li ><a th:href="@{/inicioAdmin}">Admin</a></li>
+                            <li ><a th:text="#{home.nav4}" href="login">Cerrar Sesión</a></li>
+                            <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                   th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
+                                <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                   th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>
+
+
+
+                        </ul>
+                    </div> 
                     <div class="showcase">
                         <div class="container">
                             <h1 th:text="#{home.body}"> Bienvenidos a Hotel Palace </h1>   
@@ -58,7 +58,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <p th:text="#{home.body2.1}" >Agregale sabor a tu día con 
                         nuestros increíbles menús 
                         para todos los gusto</p>
-                </div> 
+                </div>
+
+
+
+
+
+
+
+
                 <div class ="box feature-2" >
                     <h4><a th:text="#{home.body3}" href="habitaciones1">HABITACIONES</a></h4>
                     <p th:text="#{home.body3.1}" >Hermosas habitaciones diseñadas
@@ -76,12 +84,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             </section>
             <div class ="clear"></div>
-            
+
             <footer id="mainfooter" class="py-30">
                 <p>&copy; 2022 Hotel Palace</p>
-                
+
             </footer>
-                    
+
         </div>
     </body>
 </html>
