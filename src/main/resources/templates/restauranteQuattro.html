@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>    
+
+        <title>Restaurante Italiano | Bienvenidos</title>
+        <link rel="stylesheet" href="css/restaurantes.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+    </head>  
+
+    <body>
+        <header th:fragment="header">
+
+            <nav id = "navbar" class="py-30" >
+                <div class="container">
+                    <!--Header 1 -->
+                    <h1 class="logo"><a th:href="@{/Inicio}"> Hotel Palace</a></h1>
+
+                    <ul>
+                        <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                        <li><a th:text="#{restaurante.sakura}" th:href="@{/restauranteSakura}"">Restaurante Sakura</a></li>
+                        <li><a href="menuquattro">Menú Quattro</a></li>
+                        <li><a href="reservaquattroN">Crear Reserva</a></li>
+                          <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>  
+                        <li><a href="login.html">Salir</a></li>
+                    </ul>
+                </div> 
+            </nav> 
+        </header>
+
+        <div class="showcase">
+            <div class="container">
+                <h1 th:text="#{restaurante.quattro}">Restaurante Quattro</h1>                         
+            </div>      
+        </div>
+        
+<div class="card">
+  <div class="card-body">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/QuattroPlato3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/QuattroPlato2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/QuattroPlato1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/QuattroPlato4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/QuattroPlato5.jpg" class="d-block w-100" alt="...">
+                </div>                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+  </div>
+</div>
+    </body>
+
+    <footer id="mainfooter" class="py-30">
+        <p>&copy; 2022 Hotel Palace</p>
+    </footer>
+
+</html>

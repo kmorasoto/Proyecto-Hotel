@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Habitaciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/habitaciones.css">
+    </head>
+    <body id="body">
+        <div>
+            <header>
+                <nav id = "navbar" class="py-30">
+                    <div class="container">
+                        <!--Header 1 -->
+                        <h1 class="logo"><a href="Inicio"> Hotel Palace</a></h1>
+                        <!-- Vamos a crear una lista-->
+                        <ul>
+                            <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                            <li><a th:text="#{habitacion.mas}" href="habitacion">Habitaciones Más Detalles</a></li>
+                            <li><a th:text="#{accion.reservar1}" href="reservahabitacionN">Reservar</a></li>
+                            <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                            <li><a th:text="#{accion.salir}" href="logins.html">Salir</a></li>
+                        </ul>
+                    </div> 
+                    <div class="showcase">
+                        <div class="container">
+                            <h1 th:text="#{habitacion.texto}" >Habitaciones Hotel Palace </h1>   
+                            <p class="large" th:text="#{habitacion.textop}">
+                                Te ofrecemos diferentes opciones.</p>
+                        </div>
+                    </div>
+                </nav> 
+            </header>
+            <!-- Feautures-->
+            <section id="features">
+                <div class ="box feature-1" >
+                    <h4><a href="habitacion" th:text="#{habitacion.sencilla1}">SENCILLA</a></h4>              
+                </div> 
+                <div class ="box feature-2" >
+                    <h4><a href="habitacion" th:text="#{habitacion.familiar1}">FAMILIAR</a></h4>
+                </div> 
+                <div class ="box feature-3" >
+                    <h4><a href="habitacion" th:text="#{habitacion.doble2}">DOBLE 2 CAMAS</a></h4>                 
+                </div> 
+                <div class ="box feature-4" >
+                    <h4><a href="habitacion" th:text="#{habitacion.doble1}">DOBLE 1 CAMA</a></h4>
+                </div> 
+            </section>
+            <div class ="clear"></div>
+
+            <footer id="mainfooter" class="py-30">
+                <p>&copy; 2022 Hotel Palace</p>
+            </footer>
+
+        </div>
+    </body>
+</html>
+

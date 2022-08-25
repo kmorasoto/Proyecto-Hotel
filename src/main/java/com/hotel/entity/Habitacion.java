@@ -23,6 +23,7 @@ public class Habitacion implements Serializable {
     
     private long id;
     private String habitacion;
+    private String descripcion;
     private double precio;
 
     public long getId() {
@@ -48,6 +49,13 @@ public class Habitacion implements Serializable {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+    
+    public String getDescripcion() {
+        return descripcion;
+    }
 
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
    
 }

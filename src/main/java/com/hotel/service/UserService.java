@@ -4,7 +4,7 @@
  */
 package com.hotel.service;
 
-import com.hotel.entity.Registros;
+import com.hotel.entity.Registro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,11 +20,11 @@ import org.springframework.stereotype.Service;
 public class UserService implements UserDetailsService{
 
     @Autowired
-    public IRegistrosService RegistrosService;
+    public IRegistroService RegistrosService;
     
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Registros Registros = this.RegistrosService.findByNombre(username);
+        Registro Registros = this.RegistrosService.findBynombre(username);
         Userprincipal userPrincipal = new Userprincipal(Registros);
         return userPrincipal;
     }

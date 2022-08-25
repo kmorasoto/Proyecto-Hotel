@@ -7,8 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
       xmlns:sec="http://www.thymeleaft.org/extras/spring-security"> 
     
     <head>
-        <title>Home2 | Bienvenidos</title>
-        <link rel="stylesheet" href="css/Home.css">
+        <title>Home | Bienvenidos</title>
+        <link rel="stylesheet" href="css/home.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -26,15 +26,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h1 class="logo"><a> Hotel Palace</a></h1>
                     <!-- Vamos a crear una lista-->
                     <ul>
-                        <li th:text="#{home.menu}" > <a  href="Home.html">Menú Principal</a></li>
-                        <li th:text="#{home.nav}" ><a href="Home.html">Servicios</a></li>
-                        <li th:text="#{home.nav2}"><a href="acerca_de.html">Nosotros</a></li>         
-                        <li th:text="#{home.nav3}"><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-                        <li th:text="#{home.nav4}"><a href="login.html">Iniciar Sesión</a></li>
+                        <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                        <li  ><a th:text="#{home.nav}" href="Inicio">Servicios</a></li>
+                        <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                        <li ><a th:text="#{home.nav3}" th:href="@{/preguntasFrecuentes}">Preguntas Frecuentes</a></li>
+                        <li ><a th:href="@{/inicioAdmin}">Admin</a></li>
+                        <li ><a th:text="#{home.nav4}" href="login">Cerrar Sesión</a></li>
                         <li><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                               th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES |</a>
                              <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
-                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN<a></li>
+                               th:href="${urlBuilder.replaceQueryParam('lang', 'en').toUriString()}">EN</a></li>
                    
                   
                             
@@ -53,23 +54,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <!-- Feautures-->
             <section id="features">
                 <div class ="box feature-1" >
-                    <h4><a th:text="#{home.body2}" href="restauranteSakura.html">RESTAURANTE SAKURA</a></h4>
+                    <h4><a  th:href="@{/restauranteSakura}" th:text="#{home.body2}">RESTAURANTE SAKURA</a></h4>
                     <p th:text="#{home.body2.1}" >Agregale sabor a tu día con 
                         nuestros increíbles menús 
                         para todos los gusto</p>
                 </div> 
                 <div class ="box feature-2" >
-                    <h4><a th:text="#{home.body3}" href="detallesRooms.html">HABITACIONES</a></h4>
+                    <h4><a th:text="#{home.body3}" href="habitaciones1">HABITACIONES</a></h4>
                     <p th:text="#{home.body3.1}" >Hermosas habitaciones diseñadas
                         para que pueda conectar con el
                         entorno natural y su magia</p>
                 </div> 
                 <div class ="box feature-3" >
-                    <h4><a th:text="#{home.body4}" href="eventos.html">EVENTOS</a></h4>
+                    <h4><a th:text="#{home.body4}" th:href="@{/eventos}">EVENTOS</a></h4>
                     <p th:text="#{home.body4.1}" >Realiza todos tus eventos con nosotros</p>
                 </div> 
                 <div class ="box feature-4" >
-                    <h4><a th:text="#{home.body5}" href="tours.html">TOURS</a></h4>
+                    <h4><a th:text="#{home.body5}" th:href="@{/toursS}">TOURS</a></h4>
                     <p th:text="#{home.body5.1}" >Toda la emoción con nuestras actividades</p>
                 </div> 
 

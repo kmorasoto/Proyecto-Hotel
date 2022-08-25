@@ -17,13 +17,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Nombre </th>
-                    <th scope="col">Telefono </th>
-                    <th scope="col">Email </th>
-                    <th scope="col">Fecha </th>
-                    <th scope="col">Evento </th>
-                    <th scope="col">Editar </th>
-                    <th scope="col">Eliminar </th>
+                    <th th:text="#{cliente.nombre}" scope="col">Nombre </th>
+                    <th th:text="#{cliente.telefono}" scope="col">Telefono </th>
+                    <th th:text="#{cliente.correo}" scope="col">Email </th>
+                    <th th:text="#{cliente.fecha}" scope="col">Fecha </th>
+                    <th th:text="#{cliente.evento}"scope="col">Evento </th>
+                    <th th:text="#{accion.editar}" scope="col">Editar </th>
+                    <th th:text="#{accion.eliminar}"scope="col">Eliminar </th>
                 </tr>
             </thead>
             <tbody>

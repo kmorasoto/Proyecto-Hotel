@@ -3,9 +3,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
 /* 
-    Created on : 5 jun. 2022, 20:58:07
-    Author     : dell
+    Created on : 22 ago. 2022, 19:56:45
+    Author     : Daniela
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oxygen:wght@300&display=swap');
 
 *{
@@ -41,25 +42,9 @@ p{
     padding:  15 50px;
 }
 
+
 .py-30{
     padding: 30px 0;
-}
-
-/*Configuracion de las cajas*/
-.box{
-    float: left;
-    width: 25%;
-    text-align: center;
-    padding: 50px;
-    height: 250px;
-}
-
-/*Espacio entre los textos de los box*/
-.box h4{
-    padding-bottom: 30px;
-}
-.clear{
-    clear: both;
 }
 
 /*Logo Navbar*/
@@ -89,7 +74,7 @@ p{
 }
 
 #navbar ul li a{
-     float: left;
+    float: left;
     text-align: center;
     display: block;
     color: #fff;
@@ -120,50 +105,11 @@ p{
 .showcase h1{
     text-transform: uppercase;
     font-weight: lighter;
-  
-    
 }
 
-/*Box - Feautures*/
-
-#features .feature-1{
-    background: url(../images/Restaurante.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .feature-2{
-    background: url(../images/Habitacion.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .feature-3{
-    background: url(../images/eventos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#features .feature-4{
-    background: url(../images/tours.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#features h4{
-    text-transform: uppercase;
-    color: #183254;
-    
-}
-
-#features p{
-    color: #183254;
-    font-size: 17px;
-}
 
 /*footer*/
 #mainfooter{
     text-align: center;
-    
+    color: #fff;
 }

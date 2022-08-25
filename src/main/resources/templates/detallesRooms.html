@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/detallesRooms.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+             <form name="f" th:action="@{/detallesRooms}" method="post">
+            </form>
+            <header th:fragment="header">
+                <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
+                <nav id = "navbar" class="py-30">
+                    <div class="container">
+                        <!--Header 1 -->
+                        <h1 class="logo"><a href="home.html"> Hotel Palace</a></h1>
+                        <!-- Vamos a crear una lista-->
+                        <ul>
+                            <li><a th:text="#{texto.habitaciones}" th:href="@{/detallesRooms}">Habitaciones</a></li>
+                            <li><a th:text="#{home.nav}" th:href="@{/Inicio}">Servicios</a></li>
+                            <li><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>
+                            <li><a th:text="#{accion.salir}" href="logins.html">Cerrar Sesión</a></li>
+                        </ul>
+                    </div> 
+                </nav> 
+            </header>
+            <br>
+            <br>
+            <div class="row row-cols-1 row-cols-md-2 g-2" style="max-width: 2600px;">
+                <div class="col">
+                    <div class="card m-5 mt-5 p-2">
+                        <img src="images/single-room.png" class="card-img-top" alt="...">
+              
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{habitacion.sencilla}">Habitación Sencilla</h5>
+                            <p class="card-text" th:text="#{habitacion.sencillap}">Habitación sencilla para 1 o 2 personas, con preciosa vista al mar.</p>
+                            <a th:href="@{/masDetallesR1}" class="btn btn-primary" th:text="#{habitacion.detalles}">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-5 mt-5 p-2">
+                        <img src="images/family-room.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{habitacion.familiar}">Habitación Familiar</h5>
+                            <p class="card-text" th:text="#{habitacion.familiarp}">Habitación amplia con excelente ubicación, ideal para disfrutar en familia y salir de la rutina.</p>
+                             <a th:href="@{/masDetallesR2}" class="btn btn-primary" th:text="#{habitacion.detalles}">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-5 mt-5 p-2">
+                        <img src="images/double-room.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{habitacion.doble2}">Habitación Doble con 2 camas</h5>
+                            <p class="card-text" th:text="#{habitacion.doble2p}">Habitación amplia para disfrutar de un merecido descanso en pareja.</p>
+                             <a th:href="@{/masDetallesR3}"  class="btn btn-primary" th:text="#{habitacion.detalles}">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card m-5 mt-5 p-2">
+                        <img src="images/double-room-ocean-view.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{habitacion.doble1}" >Habitación Doble con 1 cama</h5>
+                            <p class="card-text" th:text="#{habitacion.doble1p}">Habitación amplia, para dos personas. Con vista al mar.</p>
+                             <a th:href="@{/masDetallesR4}"  class="btn btn-primary"th:text="#{habitacion.detalles}">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

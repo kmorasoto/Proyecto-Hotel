@@ -5,68 +5,85 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Crear Nuevo Registro</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/registro.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" >
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body id="body">
         <!-- Pendiente -->
-        <header></header>
-        <div class="container"></div>
-
-        <div class="card-header bg-black text-white"> </div>
-        <div class="card-body">
-            <!-- Formulario -->
-            <div class="container">
-                <form th:object ="${registros}"
-                      th:action ="@{/saveRegistros}"
-                      method="POST"
-                      >
-                    <input type="hidden" th:field="*{id}">
-                    <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="nombre">Nombre</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}" placeholder="Nombre" id="nombres" aria-describedby="emailHelp">
+        <header>
+            <div>
+                <!-- Esta es la clase id que no se repite, y la clase se define asi para dividir en columna (y)-->
+                <nav id = "navbar" class="py-30">
+                    <div class="container1">
+                        <!--Header 1 -->
+                        <h1 class="logo"><a href="Inicio"> Hotel Palace</a></h1>
+                        <!-- Vamos a crear una lista-->
+                        <ul>                         
+                            <li><a href="login">Salir</a></li>
+                        </ul>
+                    </div> 
+                </nav> 
+            </div> 
+        </header>
+        <div class="container">
+            <h1 class="txt-fields"> Registro </h1>
+            <form class="register-form"
+                  th:object ="${registro}"
+                  th:action="@{/saveregistro}"
+                  method="POST"
+                  >
+                <label class="col-fields">
+                    <span class="label-text"> Nombre </span>
+                    <input type="text" class="form-control form-control-sm col-md-5" th:field="*{nombre}" placeholder="nombre">
+                </label>
+                <label class="col-fields">
+                    <span class="label-text"> Apellido </span>
+                    <input type="text"  th:field="*{apellidos}" class="form-control form-control-sm col-md-5" placeholder="apellido">
+                </label>
+                <label>
+                    <span class="label-text"> Correo Electrónico </span>
+                    <input type="text"  th:field="*{email}" class="form-control form-control-sm col-md-5"placeholder="email">
+                </label>
+                <label class="password">
+                    <span class="label-text"> Contraseña </span>
+                    <button class="password2" title="password2" tabindex="-1">
+                        <span class="show password"></span>
+                    </button>
+                    <input type="text"  th:field="*{password}" class="form-control form-control-sm col-md-5"placeholder="contraseña">
+                </label>
+                <div class="text-fields">
+                   <button type="submit" class="btn btn-primary" value="Guardar">Registrarme</button>  
+                
+                <div style="color: black" class="modal fade"  id="miModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true" data-bs-backdrop="static" >
+                        <div class="modal-dialog "> 
+                            <div class ="modal-content ">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitle" style="color: black">Registro Agregado.</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p> Su guardó exitosamente.</p>
+                                </div>
+                                <div class="modal-footer">
+                                   
+                                    <a class ="btn btn-secondary" href="login">Aceptar</a>
+                               
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-md-2 col-form-label" for="apellidos">Apellidos</label>
-                        <div class="col-sm-10">
-                            <input type="text" th:field="*{apellidos}" class="form-control form-control-sm col-md-6" placeholder="Apellidos" id="apellidos" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="email">Correo Electrónico</label>
-                        <div class="col-sm-10">
-                            <input type="text" th:field="*{email}" class="form-control form-control-sm col-md-6" placeholder="Email" id="email" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="password">Contraseña</label>
-                        <div class="col-sm-10">
-                            <input type="text" th:field="*{password}" class="form-control form-control-sm col-md-6" placeholder="Password" id="password" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3 row">
-                        <label class="bg-secondary bg-gradient text-white bg-opacity-75 form-control-sm col-form-label col-md-2" for="usuarios">Usuarios</label>
-                        <div class="col-sm-10">
-                            <select th:field="*{usuarios}" class="form-control form-control-sm col-md-6" id="usuarios" aria-describedby="emailHelp">
-                                <option th:each="x:${usuarios}"
-                                        th:value="${x.id}"
-                                        th:text="${x.usuarios}"/>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" value="Guardar">Registrar</button>
-                </form>
-            </div>
+                   </div>
+            </form>
         </div>
     </body>
+     <footer class="page-footer font-small white">
+        <div style="color: white" class="text-center py-3">
+            <p>&copy; 2022 Hotel Palace</p>
+        </div>       
+    </footer>
 </html>

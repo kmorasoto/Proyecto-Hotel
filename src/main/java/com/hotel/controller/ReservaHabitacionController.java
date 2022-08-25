@@ -50,19 +50,19 @@ public class ReservaHabitacionController {
     @PostMapping("/savehabitacion")
     public String guardarReservaHabitacion (@ModelAttribute ReservaHabitacion reservahabitacion){
        reservahabitacionService.saveReservaHabitacion(reservahabitacion);
-       return "redirect:/reservahabitaciones";
+       return "redirect:/Inicio";
     }
     
-    @GetMapping("/editReservaHabitacion/{id}")
+    @GetMapping("/editreservahabitacion/{id}")
     public String editarReservaHabitacion (@PathVariable("id") Long idReservaHabitacion, Model model){
        ReservaHabitacion reservahabitacion = reservahabitacionService.getReservaHabitacionById(idReservaHabitacion);
        List<Habitacion> listaHabitaciones = habitacionService.listHabitacion();
-       model.addAttribute("ReservaHabitacion", reservahabitacion);
+       model.addAttribute("reservahabitacion", reservahabitacion);
        model.addAttribute("habitaciones",listaHabitaciones);
        return "crear_habitacion";
     }
     
-    @GetMapping("/deletehabitacion/{id}")
+    @GetMapping("/deletereservahabitacion/{id}")
     public String eliminarReservaHabitacion (@PathVariable("id") Long idReservaHabitacion){
         reservahabitacionService.delete(idReservaHabitacion);
         return "redirect:/reservahabitacion";

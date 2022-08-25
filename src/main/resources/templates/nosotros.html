@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+--><html>
+    <title>Acerca de</title>
+        <link rel="stylesheet" href="css/acerca_de.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <div>
+             <form name="f" th:action="@{/acerca_de}" method="post">
+            </form>
+            <header>
+                <nav id = "navbar" class="py-30">
+                    <div class="container">
+                        <h1  class="logo"><a th:text="#{texto.nuestrahistoria}" href="nosotros.html"> Nuestra historia</a></h1>
+                      <ul>
+                        <li ><a th:text="#{home.menu}" th:href="@{/Inicio}"> Menú Principal</a></li>
+                        <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>         
+                        <li ><a th:text="#{home.nav3}" href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                        <li ><a th:text="#{accion.salir}" href="login">Cerrar Sesión</a></li>
+                            
+                    </ul>
+                    </div>
+                       <div class="showcase">
+                        <div class="container">
+                            <h1>Hotel Palace / Guanacaste  </h1>   
+                            <p th:text="#{texto.acercade}"  class="large">
+                                Nuestro Hotel se fundó en 1990, 
+                            ubicado en la provincia de Guanacaste. <br>Hotel Palace
+                            se encuentra en un lugar perfecto para viajeros apasionados
+                            de <br>la naturaleza y tranquilidad.
+                            En nuestro hotel podrás disfrutar de grandes experiencias como
+                            <br> las diferentes opciones de Menú para todos los gustos,
+                            así como diferentes aventuras <br>y eventos todo esto en un mismo lugar, Hotel Palace </p>
+                        </div>
+                    </div>
+                </nav> 
+            </header>
+             <section id="features">
+                 
+                <div class ="box feature-1" >
+                </div> 
+                
+                 <div class ="box feature-2" >
+                </div> 
+                
+                 <div class ="box feature-3" >
+
+                </div> 
+                
+            </section>
+         </div>
+    </body>
+</html>
+

@@ -16,5 +16,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface HabitacionRepository extends CrudRepository<Habitacion,Long>{
+    Habitacion findByHabitacion (String habitacion);
     
 }
