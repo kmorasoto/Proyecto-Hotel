@@ -23,8 +23,8 @@ public class Habitacion implements Serializable {
     
     private long id;
     private String habitacion;
-    private double precio;
     private String descripcion;
+    private double precio;
 
     public long getId() {
         return id;

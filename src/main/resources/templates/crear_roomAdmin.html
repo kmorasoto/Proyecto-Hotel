@@ -66,11 +66,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container" style="color: white;">
             <!-- Formulario -->
             <div class="container">
-                <form th:object ="${habitacion}"
-                      th:action="@{/saveroom}"
+                <form th:object ="${habitacionAdmin}"
+                      th:action="@{/saveroomAdmin}"
                       method="POST"
                       >
-                    <input type="hidden" th:field="*{habitacion}">
+                    <input type="hidden" th:field="*{id}">
                     <div class="form-group mb-3 row">
                         <label class="col-md-2 col-form-label" for="habitacion" th:text="#{habitacion.tipo}"> Tipo Habitación</label>
                         <div class="col-sm-10">
@@ -101,6 +101,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <div  style="background-color: #183254;" class="card">
         <div class="card-body"> 
             <footer th:replace="plantilla/template.final::TempFooter"></footer>
-    </div> 
         </div> 
+    </div> 
 </html>
