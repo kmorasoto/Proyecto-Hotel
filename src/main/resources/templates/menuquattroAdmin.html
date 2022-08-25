@@ -82,10 +82,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <td th:text="${user.getPrecio}"></td>
                              
                             <td>
-                                <a th:href="@{/editmenuquattroAdmin/{id}(id=${user.getId})}">Editar</a>
+                                <a th:href="@{/editmenuquattroAdmin/{id}(id=${user.getId})}"th:text="#{accion.editar}">Editar</a>
                             </td>
                             <td>
-                                <a th:href="@{/deletemenuquattroAdmin/{id}(id=${user.getId})}">Eliminar</a>
+                                <a th:href="@{/deletemenuquattroAdmin/{id}(id=${user.getId})}"th:text="#{accion.eliminar}">Eliminar</a>
                             </td>
                             
                         </tr>

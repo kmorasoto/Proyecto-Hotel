@@ -74,10 +74,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getMesa.getMesa}"></td>
                     <td>
-                        <a th:href="@{/editreservaQuattro/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editreservaQuattro/{id}(id=${user.getId})}" th:text="#{accion.editar}">Edit</a>
                     </td>
                     <td>
-                        <a th:href="@{/deletereservaquattro/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/deletereservaquattro/{id}(id=${user.getId})}"th:text="#{accion.eliminar}">Delete</a>
                     </td>
                 </tr>
             </th:block>
