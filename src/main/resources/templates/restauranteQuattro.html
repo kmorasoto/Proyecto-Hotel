@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li><a th:text="#{home.menu2}" href="menuquattro">Menú Quattro</a></li>
                         <li><a th:text="#{accion.creare}" href="reservaquattroN">Crear Reserva</a></li>
                         <li ><a th:text="#{home.nav2}" th:href="@{/nosotros}">Nosotros</a></li>  
-                        <li><a href="login.html">Salir</a></li>
+                        <li><a th:text="#{accion.salir}" href="login">Salir</a></li>
                     </ul>
                 </div> 
             </nav> 
@@ -42,7 +42,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <div class="showcase">
             <div class="container">
-                <h1 th:text="#{restaurante.quattro}">Restaurante Quattro</h1>                         
+                <h1 th:text="#{restaurante.quattro}">Restaurante Quattro</h1>
+                <div style="backdrop-filter: blur(5px); color: white;">
+                    <p>Nuestro restaurante Quattro te cautivara con una oferta de comida auténtica Italiana.
+                        Viva la experiencia de saborear nuestros delicios platillos.
+                    </p>
+                </div>
             </div>      
         </div>
 
